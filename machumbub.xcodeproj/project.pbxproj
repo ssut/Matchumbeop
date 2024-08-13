@@ -1,0 +1,925 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3042EB8B2C73810400F69690 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042EB8A2C73810400F69690 /* HintView.swift */; };
+		3042EB8D2C7393BC00F69690 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042EB8C2C7393BC00F69690 /* ToastView.swift */; };
+		3042EB8F2C739E5100F69690 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042EB8E2C739E5100F69690 /* Constants.swift */; };
+		30467E152C6B862A007A0F19 /* machumbubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E142C6B862A007A0F19 /* machumbubApp.swift */; };
+		30467E192C6B862B007A0F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30467E182C6B862B007A0F19 /* Assets.xcassets */; };
+		30467E1C2C6B862B007A0F19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30467E1B2C6B862B007A0F19 /* Preview Assets.xcassets */; };
+		30467E272C6B862B007A0F19 /* machumbubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E262C6B862B007A0F19 /* machumbubTests.swift */; };
+		30467E312C6B862B007A0F19 /* machumbubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E302C6B862B007A0F19 /* machumbubUITests.swift */; };
+		30467E332C6B862B007A0F19 /* machumbubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E322C6B862B007A0F19 /* machumbubUITestsLaunchTests.swift */; };
+		30467E402C6B865B007A0F19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E3F2C6B865B007A0F19 /* ContentView.swift */; };
+		306064622C6B87BF00BC6350 /* SpellChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306064612C6B87BF00BC6350 /* SpellChecker.swift */; };
+		306064642C6B87D400BC6350 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306064632C6B87D400BC6350 /* SettingsView.swift */; };
+		306064672C6B8A7C00BC6350 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 306064662C6B8A7C00BC6350 /* KeyboardShortcuts */; };
+		306064692C6B8C5800BC6350 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 306064682C6B8C5800BC6350 /* Info.plist */; };
+		3060646B2C6B8E8C00BC6350 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060646A2C6B8E8C00BC6350 /* AppState.swift */; };
+		3060646D2C6B957D00BC6350 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060646C2C6B957D00BC6350 /* AppDelegate.swift */; };
+		306064712C6BB82D00BC6350 /* DraggableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306064702C6BB82D00BC6350 /* DraggableTextView.swift */; };
+		306064732C6C8AE400BC6350 /* SpellCheckerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306064722C6C8AE400BC6350 /* SpellCheckerExtension.swift */; };
+		30D5E0A02C73A5D700295E53 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 30D5E09F2C73A5D700295E53 /* LaunchAtLogin */; };
+		30D5E0A22C74458C00295E53 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5E0A12C74458C00295E53 /* Utils.swift */; };
+		30D5E0A52C74BB4800295E53 /* SettingsDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5E0A42C74BB4800295E53 /* SettingsDivider.swift */; };
+		30D5E0A82C74BD5C00295E53 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 30D5E0A72C74BD5C00295E53 /* Sparkle */; };
+		30D5E0B02C74C17200295E53 /* Pods_machumbub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0A92C74C15700295E53 /* Pods_machumbub.framework */; };
+		30D5E0B12C74C17200295E53 /* Pods_machumbub.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0A92C74C15700295E53 /* Pods_machumbub.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30D5E0B42C74C17C00295E53 /* Pods_machumbubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0B32C74C17C00295E53 /* Pods_machumbubTests.framework */; };
+		30D5E0B52C74C17C00295E53 /* Pods_machumbubTests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0B32C74C17C00295E53 /* Pods_machumbubTests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30D5E0B82C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0B72C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework */; };
+		30D5E0B92C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0B72C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30D5E0BC2C74C3B800295E53 /* UpdateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5E0BB2C74C3B800295E53 /* UpdateChecker.swift */; };
+		A34C9D341046A89AB0A1E0ED /* Pods_machumbub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62BB37B3BA998620C6BA6E1 /* Pods_machumbub.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30467E232C6B862B007A0F19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30467E092C6B862A007A0F19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30467E102C6B862A007A0F19;
+			remoteInfo = machumbub;
+		};
+		30467E2D2C6B862B007A0F19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30467E092C6B862A007A0F19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30467E102C6B862A007A0F19;
+			remoteInfo = machumbub;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		30D5E0B22C74C17200295E53 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				30D5E0B12C74C17200295E53 /* Pods_machumbub.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30D5E0B62C74C17C00295E53 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				30D5E0B52C74C17C00295E53 /* Pods_machumbubTests.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30D5E0BA2C74C18200295E53 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				30D5E0B92C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0106906D3DDFC1784AF771D5 /* Pods-machumbub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbub.debug.xcconfig"; path = "Target Support Files/Pods-machumbub/Pods-machumbub.debug.xcconfig"; sourceTree = "<group>"; };
+		1894E3D37FC935BEA3EE42DF /* Pods-machumbub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbub.release.xcconfig"; path = "Target Support Files/Pods-machumbub/Pods-machumbub.release.xcconfig"; sourceTree = "<group>"; };
+		2CCD25DF7D6A01504574BF17 /* Pods_machumbub_machumbubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_machumbub_machumbubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3042EB8A2C73810400F69690 /* HintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
+		3042EB8C2C7393BC00F69690 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		3042EB8E2C739E5100F69690 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		30467E112C6B862A007A0F19 /* machumbub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = machumbub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30467E142C6B862A007A0F19 /* machumbubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = machumbubApp.swift; sourceTree = "<group>"; };
+		30467E182C6B862B007A0F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30467E1B2C6B862B007A0F19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		30467E1D2C6B862B007A0F19 /* machumbub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = machumbub.entitlements; sourceTree = "<group>"; };
+		30467E222C6B862B007A0F19 /* machumbubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = machumbubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30467E262C6B862B007A0F19 /* machumbubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = machumbubTests.swift; sourceTree = "<group>"; };
+		30467E2C2C6B862B007A0F19 /* machumbubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = machumbubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30467E302C6B862B007A0F19 /* machumbubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = machumbubUITests.swift; sourceTree = "<group>"; };
+		30467E322C6B862B007A0F19 /* machumbubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = machumbubUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		30467E3F2C6B865B007A0F19 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		306064612C6B87BF00BC6350 /* SpellChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellChecker.swift; sourceTree = "<group>"; };
+		306064632C6B87D400BC6350 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		306064682C6B8C5800BC6350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3060646A2C6B8E8C00BC6350 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		3060646C2C6B957D00BC6350 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		306064702C6BB82D00BC6350 /* DraggableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableTextView.swift; sourceTree = "<group>"; };
+		306064722C6C8AE400BC6350 /* SpellCheckerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckerExtension.swift; sourceTree = "<group>"; };
+		30D5E0A12C74458C00295E53 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		30D5E0A42C74BB4800295E53 /* SettingsDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDivider.swift; sourceTree = "<group>"; };
+		30D5E0A92C74C15700295E53 /* Pods_machumbub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_machumbub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30D5E0B32C74C17C00295E53 /* Pods_machumbubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_machumbubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30D5E0B72C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_machumbub_machumbubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30D5E0BB2C74C3B800295E53 /* UpdateChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateChecker.swift; sourceTree = "<group>"; };
+		4AD7A1A528B8859594BCF5B2 /* Pods-machumbubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbubTests.release.xcconfig"; path = "Target Support Files/Pods-machumbubTests/Pods-machumbubTests.release.xcconfig"; sourceTree = "<group>"; };
+		898C33C88652E63BFBED0FB4 /* Pods-machumbub-machumbubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbub-machumbubUITests.release.xcconfig"; path = "Target Support Files/Pods-machumbub-machumbubUITests/Pods-machumbub-machumbubUITests.release.xcconfig"; sourceTree = "<group>"; };
+		89DFA2DE2EEE8DE8FFEE7A0F /* Pods-machumbubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbubTests.debug.xcconfig"; path = "Target Support Files/Pods-machumbubTests/Pods-machumbubTests.debug.xcconfig"; sourceTree = "<group>"; };
+		90CD5A3CE3B7DF0B32838938 /* Pods_machumbubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_machumbubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62BB37B3BA998620C6BA6E1 /* Pods_machumbub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_machumbub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C599C0E4C29875A660072236 /* Pods-machumbub-machumbubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbub-machumbubUITests.debug.xcconfig"; path = "Target Support Files/Pods-machumbub-machumbubUITests/Pods-machumbub-machumbubUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30467E0E2C6B862A007A0F19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30D5E0B02C74C17200295E53 /* Pods_machumbub.framework in Frameworks */,
+				30D5E0A02C73A5D700295E53 /* LaunchAtLogin in Frameworks */,
+				30D5E0A82C74BD5C00295E53 /* Sparkle in Frameworks */,
+				306064672C6B8A7C00BC6350 /* KeyboardShortcuts in Frameworks */,
+				A34C9D341046A89AB0A1E0ED /* Pods_machumbub.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30467E1F2C6B862B007A0F19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30D5E0B42C74C17C00295E53 /* Pods_machumbubTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30467E292C6B862B007A0F19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30D5E0B82C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30467E082C6B862A007A0F19 = {
+			isa = PBXGroup;
+			children = (
+				3042EB8C2C7393BC00F69690 /* ToastView.swift */,
+				306064682C6B8C5800BC6350 /* Info.plist */,
+				30467E132C6B862A007A0F19 /* machumbub */,
+				30467E252C6B862B007A0F19 /* machumbubTests */,
+				30467E2F2C6B862B007A0F19 /* machumbubUITests */,
+				30467E122C6B862A007A0F19 /* Products */,
+				FB1A3C1335099160E11D5249 /* Pods */,
+				91FFB42A341B269B3C91CFD7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		30467E122C6B862A007A0F19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30467E112C6B862A007A0F19 /* machumbub.app */,
+				30467E222C6B862B007A0F19 /* machumbubTests.xctest */,
+				30467E2C2C6B862B007A0F19 /* machumbubUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30467E132C6B862A007A0F19 /* machumbub */ = {
+			isa = PBXGroup;
+			children = (
+				30D5E0BD2C74C3E800295E53 /* UpdateChecker */,
+				30D5E0A32C74BB2F00295E53 /* SharedUIComponents */,
+				30467E142C6B862A007A0F19 /* machumbubApp.swift */,
+				30467E182C6B862B007A0F19 /* Assets.xcassets */,
+				30467E1D2C6B862B007A0F19 /* machumbub.entitlements */,
+				30467E1A2C6B862B007A0F19 /* Preview Content */,
+				30467E3F2C6B865B007A0F19 /* ContentView.swift */,
+				306064612C6B87BF00BC6350 /* SpellChecker.swift */,
+				306064632C6B87D400BC6350 /* SettingsView.swift */,
+				3060646A2C6B8E8C00BC6350 /* AppState.swift */,
+				3060646C2C6B957D00BC6350 /* AppDelegate.swift */,
+				306064722C6C8AE400BC6350 /* SpellCheckerExtension.swift */,
+				3042EB8E2C739E5100F69690 /* Constants.swift */,
+				30D5E0A12C74458C00295E53 /* Utils.swift */,
+			);
+			path = machumbub;
+			sourceTree = "<group>";
+		};
+		30467E1A2C6B862B007A0F19 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				30467E1B2C6B862B007A0F19 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		30467E252C6B862B007A0F19 /* machumbubTests */ = {
+			isa = PBXGroup;
+			children = (
+				30467E262C6B862B007A0F19 /* machumbubTests.swift */,
+			);
+			path = machumbubTests;
+			sourceTree = "<group>";
+		};
+		30467E2F2C6B862B007A0F19 /* machumbubUITests */ = {
+			isa = PBXGroup;
+			children = (
+				30467E302C6B862B007A0F19 /* machumbubUITests.swift */,
+				30467E322C6B862B007A0F19 /* machumbubUITestsLaunchTests.swift */,
+			);
+			path = machumbubUITests;
+			sourceTree = "<group>";
+		};
+		30D5E0A32C74BB2F00295E53 /* SharedUIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				306064702C6BB82D00BC6350 /* DraggableTextView.swift */,
+				3042EB8A2C73810400F69690 /* HintView.swift */,
+				30D5E0A42C74BB4800295E53 /* SettingsDivider.swift */,
+			);
+			path = SharedUIComponents;
+			sourceTree = "<group>";
+		};
+		30D5E0BD2C74C3E800295E53 /* UpdateChecker */ = {
+			isa = PBXGroup;
+			children = (
+				30D5E0BB2C74C3B800295E53 /* UpdateChecker.swift */,
+			);
+			path = UpdateChecker;
+			sourceTree = "<group>";
+		};
+		91FFB42A341B269B3C91CFD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30D5E0B72C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework */,
+				30D5E0B32C74C17C00295E53 /* Pods_machumbubTests.framework */,
+				30D5E0A92C74C15700295E53 /* Pods_machumbub.framework */,
+				2CCD25DF7D6A01504574BF17 /* Pods_machumbub_machumbubUITests.framework */,
+				90CD5A3CE3B7DF0B32838938 /* Pods_machumbubTests.framework */,
+				B62BB37B3BA998620C6BA6E1 /* Pods_machumbub.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB1A3C1335099160E11D5249 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0106906D3DDFC1784AF771D5 /* Pods-machumbub.debug.xcconfig */,
+				1894E3D37FC935BEA3EE42DF /* Pods-machumbub.release.xcconfig */,
+				C599C0E4C29875A660072236 /* Pods-machumbub-machumbubUITests.debug.xcconfig */,
+				898C33C88652E63BFBED0FB4 /* Pods-machumbub-machumbubUITests.release.xcconfig */,
+				89DFA2DE2EEE8DE8FFEE7A0F /* Pods-machumbubTests.debug.xcconfig */,
+				4AD7A1A528B8859594BCF5B2 /* Pods-machumbubTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30467E102C6B862A007A0F19 /* machumbub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30467E362C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "machumbub" */;
+			buildPhases = (
+				00F88498609780D34240066B /* [CP] Check Pods Manifest.lock */,
+				30467E0D2C6B862A007A0F19 /* Sources */,
+				30467E0E2C6B862A007A0F19 /* Frameworks */,
+				30467E0F2C6B862A007A0F19 /* Resources */,
+				5E0F08EAA1159DD279F1A4D9 /* [CP] Embed Pods Frameworks */,
+				30D5E0B22C74C17200295E53 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = machumbub;
+			packageProductDependencies = (
+				306064662C6B8A7C00BC6350 /* KeyboardShortcuts */,
+				30D5E09F2C73A5D700295E53 /* LaunchAtLogin */,
+				30D5E0A72C74BD5C00295E53 /* Sparkle */,
+			);
+			productName = machumbub;
+			productReference = 30467E112C6B862A007A0F19 /* machumbub.app */;
+			productType = "com.apple.product-type.application";
+		};
+		30467E212C6B862B007A0F19 /* machumbubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30467E392C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "machumbubTests" */;
+			buildPhases = (
+				B0BCCCA0AA4321A0458A0A78 /* [CP] Check Pods Manifest.lock */,
+				30467E1E2C6B862B007A0F19 /* Sources */,
+				30467E1F2C6B862B007A0F19 /* Frameworks */,
+				30467E202C6B862B007A0F19 /* Resources */,
+				30D5E0B62C74C17C00295E53 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30467E242C6B862B007A0F19 /* PBXTargetDependency */,
+			);
+			name = machumbubTests;
+			productName = machumbubTests;
+			productReference = 30467E222C6B862B007A0F19 /* machumbubTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		30467E2B2C6B862B007A0F19 /* machumbubUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30467E3C2C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "machumbubUITests" */;
+			buildPhases = (
+				610BB47D42B04F06936D4BCF /* [CP] Check Pods Manifest.lock */,
+				30467E282C6B862B007A0F19 /* Sources */,
+				30467E292C6B862B007A0F19 /* Frameworks */,
+				30467E2A2C6B862B007A0F19 /* Resources */,
+				4A1DCC426867D7B6763D6452 /* [CP] Embed Pods Frameworks */,
+				30D5E0BA2C74C18200295E53 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30467E2E2C6B862B007A0F19 /* PBXTargetDependency */,
+			);
+			name = machumbubUITests;
+			productName = machumbubUITests;
+			productReference = 30467E2C2C6B862B007A0F19 /* machumbubUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30467E092C6B862A007A0F19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					30467E102C6B862A007A0F19 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					30467E212C6B862B007A0F19 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 30467E102C6B862A007A0F19;
+					};
+					30467E2B2C6B862B007A0F19 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 30467E102C6B862A007A0F19;
+					};
+				};
+			};
+			buildConfigurationList = 30467E0C2C6B862A007A0F19 /* Build configuration list for PBXProject "machumbub" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 30467E082C6B862A007A0F19;
+			packageReferences = (
+				306064652C6B8A7C00BC6350 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+				30D5E09E2C73A5D700295E53 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+				30D5E0A62C74BD5B00295E53 /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
+			productRefGroup = 30467E122C6B862A007A0F19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30467E102C6B862A007A0F19 /* machumbub */,
+				30467E212C6B862B007A0F19 /* machumbubTests */,
+				30467E2B2C6B862B007A0F19 /* machumbubUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30467E0F2C6B862A007A0F19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30467E1C2C6B862B007A0F19 /* Preview Assets.xcassets in Resources */,
+				30467E192C6B862B007A0F19 /* Assets.xcassets in Resources */,
+				306064692C6B8C5800BC6350 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30467E202C6B862B007A0F19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30467E2A2C6B862B007A0F19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00F88498609780D34240066B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-machumbub-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A1DCC426867D7B6763D6452 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-machumbub-machumbubUITests/Pods-machumbub-machumbubUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-machumbub-machumbubUITests/Pods-machumbub-machumbubUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-machumbub-machumbubUITests/Pods-machumbub-machumbubUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E0F08EAA1159DD279F1A4D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-machumbub/Pods-machumbub-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-machumbub/Pods-machumbub-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-machumbub/Pods-machumbub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		610BB47D42B04F06936D4BCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-machumbub-machumbubUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0BCCCA0AA4321A0458A0A78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-machumbubTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30467E0D2C6B862A007A0F19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				306064732C6C8AE400BC6350 /* SpellCheckerExtension.swift in Sources */,
+				3042EB8B2C73810400F69690 /* HintView.swift in Sources */,
+				3060646D2C6B957D00BC6350 /* AppDelegate.swift in Sources */,
+				306064642C6B87D400BC6350 /* SettingsView.swift in Sources */,
+				3042EB8D2C7393BC00F69690 /* ToastView.swift in Sources */,
+				30D5E0BC2C74C3B800295E53 /* UpdateChecker.swift in Sources */,
+				3060646B2C6B8E8C00BC6350 /* AppState.swift in Sources */,
+				30467E402C6B865B007A0F19 /* ContentView.swift in Sources */,
+				306064622C6B87BF00BC6350 /* SpellChecker.swift in Sources */,
+				3042EB8F2C739E5100F69690 /* Constants.swift in Sources */,
+				30467E152C6B862A007A0F19 /* machumbubApp.swift in Sources */,
+				306064712C6BB82D00BC6350 /* DraggableTextView.swift in Sources */,
+				30D5E0A22C74458C00295E53 /* Utils.swift in Sources */,
+				30D5E0A52C74BB4800295E53 /* SettingsDivider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30467E1E2C6B862B007A0F19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30467E272C6B862B007A0F19 /* machumbubTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30467E282C6B862B007A0F19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30467E332C6B862B007A0F19 /* machumbubUITestsLaunchTests.swift in Sources */,
+				30467E312C6B862B007A0F19 /* machumbubUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30467E242C6B862B007A0F19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30467E102C6B862A007A0F19 /* machumbub */;
+			targetProxy = 30467E232C6B862B007A0F19 /* PBXContainerItemProxy */;
+		};
+		30467E2E2C6B862B007A0F19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30467E102C6B862A007A0F19 /* machumbub */;
+			targetProxy = 30467E2D2C6B862B007A0F19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		30467E342C6B862B007A0F19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		30467E352C6B862B007A0F19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		30467E372C6B862B007A0F19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0106906D3DDFC1784AF771D5 /* Pods-machumbub.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = machumbub/machumbub.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"machumbub/Preview Content\"";
+				DEVELOPMENT_TEAM = 2V5P3KZ3LS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Machumbub;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "키보드 단축키를 사용하여 다른 앱에 선택된 텍스트를 자동으로 복사하기 위해 권한이 필요합니다.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.machumbub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		30467E382C6B862B007A0F19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1894E3D37FC935BEA3EE42DF /* Pods-machumbub.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = machumbub/machumbub.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"machumbub/Preview Content\"";
+				DEVELOPMENT_TEAM = 2V5P3KZ3LS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Machumbub;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "키보드 단축키를 사용하여 다른 앱에 선택된 텍스트를 자동으로 복사하기 위해 권한이 필요합니다.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.machumbub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		30467E3A2C6B862B007A0F19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89DFA2DE2EEE8DE8FFEE7A0F /* Pods-machumbubTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2V5P3KZ3LS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.machumbubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/machumbub.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/machumbub";
+			};
+			name = Debug;
+		};
+		30467E3B2C6B862B007A0F19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AD7A1A528B8859594BCF5B2 /* Pods-machumbubTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2V5P3KZ3LS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.machumbubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/machumbub.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/machumbub";
+			};
+			name = Release;
+		};
+		30467E3D2C6B862B007A0F19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C599C0E4C29875A660072236 /* Pods-machumbub-machumbubUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2V5P3KZ3LS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.machumbubUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = machumbub;
+			};
+			name = Debug;
+		};
+		30467E3E2C6B862B007A0F19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 898C33C88652E63BFBED0FB4 /* Pods-machumbub-machumbubUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2V5P3KZ3LS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.machumbubUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = machumbub;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30467E0C2C6B862A007A0F19 /* Build configuration list for PBXProject "machumbub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30467E342C6B862B007A0F19 /* Debug */,
+				30467E352C6B862B007A0F19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30467E362C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "machumbub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30467E372C6B862B007A0F19 /* Debug */,
+				30467E382C6B862B007A0F19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30467E392C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "machumbubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30467E3A2C6B862B007A0F19 /* Debug */,
+				30467E3B2C6B862B007A0F19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30467E3C2C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "machumbubUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30467E3D2C6B862B007A0F19 /* Debug */,
+				30467E3E2C6B862B007A0F19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		306064652C6B8A7C00BC6350 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+		30D5E09E2C73A5D700295E53 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				kind = exactVersion;
+				version = 1.1.0;
+			};
+		};
+		30D5E0A62C74BD5B00295E53 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		306064662C6B8A7C00BC6350 /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 306064652C6B8A7C00BC6350 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+		30D5E09F2C73A5D700295E53 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30D5E09E2C73A5D700295E53 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
+		30D5E0A72C74BD5C00295E53 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30D5E0A62C74BD5B00295E53 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 30467E092C6B862A007A0F19 /* Project object */;
+}

@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.9.1)
+  - SwiftSoup (2.7.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.4)
+  - SwiftSoup (~> 2.3)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SwiftSoup
+
+SPEC CHECKSUMS:
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  SwiftSoup: e3849c3293b1efee9cf892f91f6ae5c22bfeb5f7
+
+PODFILE CHECKSUM: 9f54fa0f699c161a3d96880165bdc95e97be77eb
+
+COCOAPODS: 1.15.2
