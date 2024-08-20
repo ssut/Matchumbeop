@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30410C0A2C74EC1300AF9126 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 30410C092C74EC1300AF9126 /* AppIcon.icns */; };
 		3042EB8B2C73810400F69690 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042EB8A2C73810400F69690 /* HintView.swift */; };
 		3042EB8D2C7393BC00F69690 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042EB8C2C7393BC00F69690 /* ToastView.swift */; };
 		3042EB8F2C739E5100F69690 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042EB8E2C739E5100F69690 /* Constants.swift */; };
 		30467E152C6B862A007A0F19 /* machumbubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E142C6B862A007A0F19 /* machumbubApp.swift */; };
-		30467E192C6B862B007A0F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30467E182C6B862B007A0F19 /* Assets.xcassets */; };
 		30467E1C2C6B862B007A0F19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30467E1B2C6B862B007A0F19 /* Preview Assets.xcassets */; };
 		30467E272C6B862B007A0F19 /* machumbubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E262C6B862B007A0F19 /* machumbubTests.swift */; };
 		30467E312C6B862B007A0F19 /* machumbubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E302C6B862B007A0F19 /* machumbubUITests.swift */; };
@@ -36,6 +36,8 @@
 		30D5E0B82C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0B72C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework */; };
 		30D5E0B92C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0B72C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		30D5E0BC2C74C3B800295E53 /* UpdateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5E0BB2C74C3B800295E53 /* UpdateChecker.swift */; };
+		30D5E0C22C74D48B00295E53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30D5E0C12C74D48B00295E53 /* GoogleService-Info.plist */; };
+		30D5E0C32C74EA3600295E53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30467E182C6B862B007A0F19 /* Assets.xcassets */; };
 		A34C9D341046A89AB0A1E0ED /* Pods_machumbub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62BB37B3BA998620C6BA6E1 /* Pods_machumbub.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,12 +98,13 @@
 		0106906D3DDFC1784AF771D5 /* Pods-machumbub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbub.debug.xcconfig"; path = "Target Support Files/Pods-machumbub/Pods-machumbub.debug.xcconfig"; sourceTree = "<group>"; };
 		1894E3D37FC935BEA3EE42DF /* Pods-machumbub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbub.release.xcconfig"; path = "Target Support Files/Pods-machumbub/Pods-machumbub.release.xcconfig"; sourceTree = "<group>"; };
 		2CCD25DF7D6A01504574BF17 /* Pods_machumbub_machumbubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_machumbub_machumbubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30410C092C74EC1300AF9126 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 		3042EB8A2C73810400F69690 /* HintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
 		3042EB8C2C7393BC00F69690 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		3042EB8E2C739E5100F69690 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		30467E112C6B862A007A0F19 /* machumbub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = machumbub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30467E142C6B862A007A0F19 /* machumbubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = machumbubApp.swift; sourceTree = "<group>"; };
-		30467E182C6B862B007A0F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30467E182C6B862B007A0F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = machumbub/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		30467E1B2C6B862B007A0F19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30467E1D2C6B862B007A0F19 /* machumbub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = machumbub.entitlements; sourceTree = "<group>"; };
 		30467E222C6B862B007A0F19 /* machumbubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = machumbubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +126,7 @@
 		30D5E0B32C74C17C00295E53 /* Pods_machumbubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_machumbubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D5E0B72C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_machumbub_machumbubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D5E0BB2C74C3B800295E53 /* UpdateChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateChecker.swift; sourceTree = "<group>"; };
+		30D5E0C12C74D48B00295E53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4AD7A1A528B8859594BCF5B2 /* Pods-machumbubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbubTests.release.xcconfig"; path = "Target Support Files/Pods-machumbubTests/Pods-machumbubTests.release.xcconfig"; sourceTree = "<group>"; };
 		898C33C88652E63BFBED0FB4 /* Pods-machumbub-machumbubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbub-machumbubUITests.release.xcconfig"; path = "Target Support Files/Pods-machumbub-machumbubUITests/Pods-machumbub-machumbubUITests.release.xcconfig"; sourceTree = "<group>"; };
 		89DFA2DE2EEE8DE8FFEE7A0F /* Pods-machumbubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbubTests.debug.xcconfig"; path = "Target Support Files/Pods-machumbubTests/Pods-machumbubTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 			children = (
 				3042EB8C2C7393BC00F69690 /* ToastView.swift */,
 				306064682C6B8C5800BC6350 /* Info.plist */,
+				30410C092C74EC1300AF9126 /* AppIcon.icns */,
 				30467E132C6B862A007A0F19 /* machumbub */,
 				30467E252C6B862B007A0F19 /* machumbubTests */,
 				30467E2F2C6B862B007A0F19 /* machumbubUITests */,
@@ -190,6 +195,7 @@
 		30467E132C6B862A007A0F19 /* machumbub */ = {
 			isa = PBXGroup;
 			children = (
+				30D5E0C12C74D48B00295E53 /* GoogleService-Info.plist */,
 				30D5E0BD2C74C3E800295E53 /* UpdateChecker */,
 				30D5E0A32C74BB2F00295E53 /* SharedUIComponents */,
 				30467E142C6B862A007A0F19 /* machumbubApp.swift */,
@@ -382,6 +388,7 @@
 				306064652C6B8A7C00BC6350 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 				30D5E09E2C73A5D700295E53 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
 				30D5E0A62C74BD5B00295E53 /* XCRemoteSwiftPackageReference "Sparkle" */,
+				30D5E0BE2C74CF7C00295E53 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 30467E122C6B862A007A0F19 /* Products */;
 			projectDirPath = "";
@@ -399,8 +406,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30410C0A2C74EC1300AF9126 /* AppIcon.icns in Resources */,
 				30467E1C2C6B862B007A0F19 /* Preview Assets.xcassets in Resources */,
-				30467E192C6B862B007A0F19 /* Assets.xcassets in Resources */,
+				30D5E0C22C74D48B00295E53 /* GoogleService-Info.plist in Resources */,
+				30D5E0C32C74EA3600295E53 /* Assets.xcassets in Resources */,
 				306064692C6B8C5800BC6350 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,11 +712,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = machumbub/machumbub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"machumbub/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "machumbub/Preview\\ Content";
 				DEVELOPMENT_TEAM = 2V5P3KZ3LS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -717,12 +727,22 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSAppleEventsUsageDescription = "키보드 단축키를 사용하여 다른 앱에 선택된 텍스트를 자동으로 복사하기 위해 권한이 필요합니다.";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "2024 Suhun Han (@ssut)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"SwiftSoup\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.machumbub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -736,11 +756,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = machumbub/machumbub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"machumbub/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "machumbub/Preview\\ Content";
 				DEVELOPMENT_TEAM = 2V5P3KZ3LS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -750,12 +771,22 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSAppleEventsUsageDescription = "키보드 단축키를 사용하여 다른 앱에 선택된 텍스트를 자동으로 복사하기 위해 권한이 필요합니다.";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "2024 Suhun Han (@ssut)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"SwiftSoup\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.machumbub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -899,6 +930,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.6.4;
+			};
+		};
+		30D5E0BE2C74CF7C00295E53 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

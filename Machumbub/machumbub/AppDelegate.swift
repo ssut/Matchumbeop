@@ -1,5 +1,6 @@
 import SwiftUI
 import KeyboardShortcuts
+import FirebaseCore
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     @StateObject var appState = AppState.shared
@@ -19,6 +20,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         AppState.shared.setAppDelegate(self)
         updateChecker.updateCheckerDelegate = self
+        
+        FirebaseApp.configure()
         
         statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         if let button = statusBarItem?.button {

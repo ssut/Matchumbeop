@@ -3,6 +3,9 @@ target 'machumbub' do
 
   pod 'Alamofire', '~> 5.4'
   pod 'SwiftSoup', '~> 2.3'
+  pod 'FirebaseCore'
+  pod 'FirebaseAnalytics'
+  pod 'FirebaseCrashlytics'
 
   target 'machumbubTests' do
     inherit! :search_paths
