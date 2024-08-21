@@ -13,6 +13,8 @@ final class AppState: ObservableObject {
     
     @Published var appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     
+    private lazy var analytics: Analytics = MachumbubAnalytics.shared
+    
     var spellChecker = SpellChecker()
     private weak var appDelegate: AppDelegate?
     
@@ -30,7 +32,12 @@ final class AppState: ObservableObject {
 //        }
         
         KeyboardShortcuts.onKeyUp(for: .pasteAndCheck) { [weak self] in
-            self?.pasteAndCheck()
+            let text = NSPasteboard.general.string(forType: .string) ?? ""
+            self?.pasteAndCheck(input: text)
+            
+            if !text.isEmpty {
+                self?.analytics.send(.spellChecked(method: .clipboard, length: text.count))
+            }
         }
     }
     
@@ -43,15 +50,17 @@ final class AppState: ObservableObject {
     }
     
     func toggleWindow() {
-        appDelegate?.togglePopover()
+        if appDelegate?.togglePopover() == true {
+            self.analytics.send(.applicationDidBecomeActive(method: .keyboardShortcut))
+        }
     }
     
     func checkForUpdate() {
         appDelegate?.checkForUpdate()
     }
     
-    func pasteAndCheck(text: String? = nil) {
-        appDelegate?.pasteAndCheck(input: text)
+    func pasteAndCheck(input: String) {
+        appDelegate?.pasteAndCheck(input: input)
     }
     
     @MainActor

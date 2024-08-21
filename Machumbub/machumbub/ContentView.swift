@@ -11,6 +11,8 @@ struct ContentView: View {
      
      @FocusState private var isTextEditorFocused: Bool
      
+     private let analytics: Analytics = MachumbubAnalytics.shared
+     
      var body: some View {
           VStack(spacing: 10) {
                TextEditor(text: $appState.text)
@@ -73,6 +75,7 @@ struct ContentView: View {
                          if (!appState.isLoading && press.key == KeyEquivalent.return && press.modifiers.contains(EventModifiers.command)) {
                               Task {
                                    await self.appState.checkSpelling(text: appState.text)
+                                   self.analytics.send(.spellChecked(method: .inApp, length: appState.text.count))
                               }
                               return .handled
                          }
@@ -113,6 +116,8 @@ struct ContentView: View {
                                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                                         appState.showToast = false
                                    }
+                                   
+                                   self.analytics.send(.textCopied)
                               }) {
                                    Text("복사")
                               }

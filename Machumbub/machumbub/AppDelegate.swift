@@ -11,6 +11,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var settingsWindow: NSWindow?
     var resultWindowController: NSWindowController?
     
+    private lazy var analytics: Analytics = MachumbubAnalytics.shared
+    
     let updateChecker = UpdateChecker(
         hostBundle: locateHostBundleURL(url: Bundle.main.bundleURL)
             .flatMap(Bundle.init(url:)),
@@ -45,10 +47,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu = statusBarMenu
     }
     
-    @MainActor @objc func pasteAndCheck(input: String? = nil) {
-        togglePopover()
+    @MainActor @objc func pasteAndCheck(input: String) {
+        _ = togglePopover()
         
-        let text = (input ?? NSPasteboard.general.string(forType: .string) ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        let text = input.trimmed()
         if text.isEmpty {
             return
         }
@@ -91,19 +93,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             statusBarItem.button?.performClick(nil)
             statusBarItem.menu = nil
         } else {
-            togglePopover()
+            if togglePopover() {
+                self.analytics.send(.applicationDidBecomeActive(method: .menuBar))
+            }
         }
     }
     
-    @objc func togglePopover() {
+    @objc func togglePopover() -> Bool {
         if popover.isShown {
             popover.performClose(nil)
         } else {
             if let button = statusBarItem?.button {
                 popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
                 NSApp.activate(ignoringOtherApps: true)
+                return true
             }
         }
+        
+        return false
     }
     
     @MainActor @objc func openSettings() {
@@ -128,6 +135,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             settingsWindow.orderFrontRegardless()
             
             NSApp.activate(ignoringOtherApps: true)
+            self.analytics.send(.settingsOpened)
         }
     }
     
@@ -136,6 +144,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func quitApp() {
+        self.analytics.send(.quit, forceSend: true)
+
         NSApp.terminate(nil)
     }
 }
