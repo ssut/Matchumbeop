@@ -36,7 +36,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.behavior = .transient
         
         let statusBarMenu = NSMenu()
+        statusBarMenu.minimumWidth = 120
         statusBarMenu.addItem(NSMenuItem(title: "설정", action: #selector(openSettings), keyEquivalent: ""))
+        statusBarMenu.addItem(NSMenuItem(title: "업데이트 확인", action: #selector(checkForUpdate), keyEquivalent: ""))
         statusBarMenu.addItem(NSMenuItem.separator())
         statusBarMenu.addItem(NSMenuItem(title: "종료", action: #selector(quitApp), keyEquivalent: ""))
         
