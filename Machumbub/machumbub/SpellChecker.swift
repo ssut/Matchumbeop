@@ -56,7 +56,7 @@ class SpellChecker {
             throw NSError(domain: "com.spellchecker.error", code: 1, userInfo: [NSLocalizedDescriptionKey: "Speller API URL not set"])
         }
         
-        let url = apiUrl + text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let url = apiUrl + text.addingPercentEncoding(withAllowedCharacters: .afURLQueryAllowed)!
         
         do {
             var spellerResponse = try await fetchSpellerResponse(from: url)
