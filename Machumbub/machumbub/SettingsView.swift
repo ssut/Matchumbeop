@@ -18,7 +18,13 @@ struct SettingsView: View {
         VStack(alignment: .leading, spacing: 0) {
             HStack(alignment: .top) {
                 HStack(alignment: .top) {
-                    Text("Machumbub: 한글 맞춤법 검사기")
+                    Text("Machumbub: ").font(.title).fontWeight(.heavy)
+                    + Text("한글 ").font(.title)
+                    + Text("마춤뻡")
+                        .font(.title)
+                        .strikethrough()
+                        .foregroundColor(Color.primary.opacity(0.6))
+                    + Text(" 맞춤법 검사기")
                         .font(.title)
                     Text("\(appState.appVersion ?? "")")
                         .font(.footnote)
