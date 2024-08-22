@@ -17,7 +17,7 @@
 
 ## 미리 보기
 
-<img src="https://github.com/user-attachments/assets/e0fda0ab-d59c-4831-81b6-8a7359ca9758" width="30%" />
+<img src="https://github.com/user-attachments/assets/e0fda0ab-d59c-4831-81b6-8a7359ca9758" width="45%" />
 
 ## 사용하기
 
@@ -25,7 +25,7 @@
 
 ### 기본 단축키
 
-<img src="https://github.com/user-attachments/assets/3d1a020e-3198-494e-9d7e-13076827c9f8" width="50%" />
+![Screenshot 2024-08-22 at 23 20 26](https://github.com/user-attachments/assets/6d113b8c-1853-4d06-9929-e137b263dac6)
 
 - **cmd + option + k:** 앱 실행
 - **cmd + shift + v:** 클립보드에 복사된 텍스트를 자동으로 붙여 넣어 맞춤법 검사 진행
