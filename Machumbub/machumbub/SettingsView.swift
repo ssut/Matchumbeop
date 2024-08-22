@@ -133,9 +133,10 @@ struct SettingsView: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                     .padding(.top, 2)
-                Text("이 앱은 웹에서 지원하는 여러 맞춤법 검사기를 macOS 환경에서 편하게 사용할 수 있도록 개발된 앱으로 각 검사기를 개발한 회사의 공식 앱이 아닙니다.")
+                Text("이 앱은 웹에서 지원하는 맞춤법 검사기를 macOS에서 편하게 사용할 수 있도록 개발된 앱으로 각 검사기를 개발한 회사의 공식 앱이 아닙니다.")
                     .font(.footnote)
                     .foregroundColor(.secondary)
+                    .multilineTextAlignment(.leading)
                 
                 HStack(spacing: 16) {
                     Link(destination: URL(string: "https://github.com/ssut/machumbub")!)
