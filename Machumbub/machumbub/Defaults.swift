@@ -2,7 +2,7 @@ import Foundation
 import Defaults
 
 enum SpellCheckerEngine: String, Defaults.Serializable, CaseIterable, Identifiable, CustomStringConvertible {
-    case naver, kakao
+    case naver
     
     var id: Self { self }
 
@@ -10,8 +10,8 @@ enum SpellCheckerEngine: String, Defaults.Serializable, CaseIterable, Identifiab
         switch self {
         case .naver:
             return "네이버 (NAVER)"
-        case .kakao:
-            return "카카오 (Daum)"
+//        case .kakao:
+//            return "카카오 (Daum)"
         }
     }
 }

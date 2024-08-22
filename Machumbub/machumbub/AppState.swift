@@ -56,11 +56,10 @@ final class AppState: ObservableObject {
     private static func createSpellChecker(for engine: SpellCheckerEngine) -> SpellChecker {
         switch engine {
         case .naver:
-            print("changed to naver")
             return NaverSpellChecker()
-        case .kakao:
-            print("changed to kakao")
-            return NaverSpellChecker()
+//        case .kakao:
+//            print("changed to kakao")
+//            return NaverSpellChecker()
         }
     }
     
