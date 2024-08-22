@@ -1,4 +1,5 @@
 {
+  "originHash" : "5799a3cf98113e32fa91f098af004cfea63bcaf59aade2778d5534a8045d09ad",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -16,6 +17,15 @@
       "state" : {
         "revision" : "21fe1af9be463a359aaf8d96789ef73fc3760d09",
         "version" : "11.0.1"
+      }
+    },
+    {
+      "identity" : "defaults",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/Defaults",
+      "state" : {
+        "branch" : "main",
+        "revision" : "4c009d5c2496e7aa126e922c94dd3d6ae049efa2"
       }
     },
     {
@@ -145,5 +155,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

@@ -2,7 +2,7 @@ import Foundation
 import Alamofire
 import SwiftSoup
 
-class SpellChecker {
+class NaverSpellChecker : SpellChecker {
     private let SPELLER_PROVIDER_URL = "https://m.search.naver.com/search.naver?query=%EB%A7%9E%EC%B6%A4%EB%B2%95%EA%B2%80%EC%82%AC%EA%B8%B0"
     private let PASSPORT_KEY_REGEX = "SpellerProxy\\?passportKey=([a-zA-Z0-9]+)"
     private let SPELLER_API_URL_BASE = "https://m.search.naver.com/p/csearch/ocontent/util/SpellerProxy?passportKey="

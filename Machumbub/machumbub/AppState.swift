@@ -1,10 +1,14 @@
 import SwiftUI
 import KeyboardShortcuts
+import Combine
+import Defaults
 
 @MainActor
 final class AppState: ObservableObject {
     static let shared = AppState(appDelegate: nil)
     
+    private weak var appDelegate: AppDelegate?
+
     @Published var text = ""
     @Published var isLoading = false
     @Published var result: AttributedString?
@@ -15,11 +19,19 @@ final class AppState: ObservableObject {
     
     private lazy var analytics: Analytics = MachumbubAnalytics.shared
     
-    var spellChecker = SpellChecker()
-    private weak var appDelegate: AppDelegate?
+    @Published var spellChecker: SpellChecker
+    private var cancellables = Set<AnyCancellable>()
     
     init(appDelegate: AppDelegate?) {
+        self.spellChecker = AppState.createSpellChecker(for: Defaults[.spellCheckerEngine])
         self.appDelegate = appDelegate
+        
+        Defaults.publisher(.spellCheckerEngine)
+            .removeDuplicates()
+            .sink { [weak self] value in
+                self?.updateSpellChecker(for: value.newValue)
+            }
+            .store(in: &cancellables)
         
         KeyboardShortcuts.onKeyUp(for: .togglePopover) { [weak self] in
             self?.toggleWindow()
@@ -41,6 +53,21 @@ final class AppState: ObservableObject {
         }
     }
     
+    private static func createSpellChecker(for engine: SpellCheckerEngine) -> SpellChecker {
+        switch engine {
+        case .naver:
+            print("changed to naver")
+            return NaverSpellChecker()
+        case .kakao:
+            print("changed to kakao")
+            return NaverSpellChecker()
+        }
+    }
+    
+    private func updateSpellChecker(for engine: SpellCheckerEngine) {
+        self.spellChecker = AppState.createSpellChecker(for: engine)
+    }
+
     func setAppDelegate(_ appDelegate: AppDelegate) {
         self.appDelegate = appDelegate
     }

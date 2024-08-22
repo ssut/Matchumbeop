@@ -1,6 +1,7 @@
 import SwiftUI
 import LaunchAtLogin
 import KeyboardShortcuts
+import Defaults
 
 extension KeyboardShortcuts.Name {
     static let togglePopover = Self("togglePopover", default: .init(.k, modifiers: [.command, .option]))
@@ -11,11 +12,13 @@ extension KeyboardShortcuts.Name {
 struct SettingsView: View {
     @StateObject var appState = AppState.shared
     
+    @Default(.spellCheckerEngine) var spellCheckerEngine: SpellCheckerEngine
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack(alignment: .top) {
                 HStack(alignment: .top) {
-                    Text("마ㅈ춤법 검사기")
+                    Text("Machumbub: 한글 맞춤법 검사기")
                         .font(.title)
                     Text("\(appState.appVersion ?? "")")
                         .font(.footnote)
@@ -42,6 +45,27 @@ struct SettingsView: View {
             
             VStack(alignment: .leading) {
                 Grid(alignment: .leading) {
+                    GridRow(alignment: .firstTextBaseline) {
+                        Text("검사 엔진:")
+                            .gridColumnAlignment(.trailing)
+                        
+                        VStack(alignment: .leading) {
+                            Picker("", selection: $spellCheckerEngine) {
+                                ForEach(SpellCheckerEngine.allCases) { engine in
+                                    Text(engine.description).tag(engine)
+                                }
+                            }
+                            .pickerStyle(RadioGroupPickerStyle())
+                            
+                            Text("")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                                .padding(.leading, 10)
+                        }
+                        .gridColumnAlignment(.leading)
+                    }
+
+                    
                     GridRow(alignment: .firstTextBaseline) {
                         Text("단축키:")
                             .gridColumnAlignment(.trailing)

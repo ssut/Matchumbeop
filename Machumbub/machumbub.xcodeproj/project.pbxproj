@@ -12,6 +12,8 @@
 		302B5FB72C7620CF0043351B /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FB62C7620CF0043351B /* AnalyticsEvent.swift */; };
 		302B5FBA2C7621180043351B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FB92C7621180043351B /* String.swift */; };
 		302B5FBD2C7622170043351B /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FBC2C7622170043351B /* AnalyticsEvents.swift */; };
+		302B5FC02C7756EB0043351B /* SpellChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FBF2C7756EB0043351B /* SpellChecker.swift */; };
+		302B5FC32C7758690043351B /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FC22C7758690043351B /* Defaults.swift */; };
 		30410C0A2C74EC1300AF9126 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 30410C092C74EC1300AF9126 /* AppIcon.icns */; };
 		3042EB8B2C73810400F69690 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042EB8A2C73810400F69690 /* HintView.swift */; };
 		3042EB8D2C7393BC00F69690 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042EB8C2C7393BC00F69690 /* ToastView.swift */; };
@@ -22,7 +24,7 @@
 		30467E312C6B862B007A0F19 /* machumbubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E302C6B862B007A0F19 /* machumbubUITests.swift */; };
 		30467E332C6B862B007A0F19 /* machumbubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E322C6B862B007A0F19 /* machumbubUITestsLaunchTests.swift */; };
 		30467E402C6B865B007A0F19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E3F2C6B865B007A0F19 /* ContentView.swift */; };
-		306064622C6B87BF00BC6350 /* SpellChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306064612C6B87BF00BC6350 /* SpellChecker.swift */; };
+		306064622C6B87BF00BC6350 /* NaverSpellChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306064612C6B87BF00BC6350 /* NaverSpellChecker.swift */; };
 		306064642C6B87D400BC6350 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306064632C6B87D400BC6350 /* SettingsView.swift */; };
 		306064672C6B8A7C00BC6350 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 306064662C6B8A7C00BC6350 /* KeyboardShortcuts */; };
 		306064692C6B8C5800BC6350 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 306064682C6B8C5800BC6350 /* Info.plist */; };
@@ -30,6 +32,7 @@
 		3060646D2C6B957D00BC6350 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060646C2C6B957D00BC6350 /* AppDelegate.swift */; };
 		306064712C6BB82D00BC6350 /* DraggableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306064702C6BB82D00BC6350 /* DraggableTextView.swift */; };
 		306064732C6C8AE400BC6350 /* SpellCheckerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306064722C6C8AE400BC6350 /* SpellCheckerExtension.swift */; };
+		30A0D8D92C775C1400F56515 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 30A0D8D82C775C1400F56515 /* Defaults */; };
 		30D5E0A02C73A5D700295E53 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 30D5E09F2C73A5D700295E53 /* LaunchAtLogin */; };
 		30D5E0A22C74458C00295E53 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5E0A12C74458C00295E53 /* Utils.swift */; };
 		30D5E0A52C74BB4800295E53 /* SettingsDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5E0A42C74BB4800295E53 /* SettingsDivider.swift */; };
@@ -108,6 +111,8 @@
 		302B5FB62C7620CF0043351B /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
 		302B5FB92C7621180043351B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		302B5FBC2C7622170043351B /* AnalyticsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvents.swift; sourceTree = "<group>"; };
+		302B5FBF2C7756EB0043351B /* SpellChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellChecker.swift; sourceTree = "<group>"; };
+		302B5FC22C7758690043351B /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		30410C092C74EC1300AF9126 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 		3042EB8A2C73810400F69690 /* HintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
 		3042EB8C2C7393BC00F69690 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
@@ -123,7 +128,7 @@
 		30467E302C6B862B007A0F19 /* machumbubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = machumbubUITests.swift; sourceTree = "<group>"; };
 		30467E322C6B862B007A0F19 /* machumbubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = machumbubUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		30467E3F2C6B865B007A0F19 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		306064612C6B87BF00BC6350 /* SpellChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellChecker.swift; sourceTree = "<group>"; };
+		306064612C6B87BF00BC6350 /* NaverSpellChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverSpellChecker.swift; sourceTree = "<group>"; };
 		306064632C6B87D400BC6350 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		306064682C6B8C5800BC6350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3060646A2C6B8E8C00BC6350 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -150,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30A0D8D92C775C1400F56515 /* Defaults in Frameworks */,
 				30D5E0B02C74C17200295E53 /* Pods_machumbub.framework in Frameworks */,
 				30D5E0A02C73A5D700295E53 /* LaunchAtLogin in Frameworks */,
 				30D5E0A82C74BD5C00295E53 /* Sparkle in Frameworks */,
@@ -204,6 +210,15 @@
 			path = Events;
 			sourceTree = "<group>";
 		};
+		302B5FBE2C7756B20043351B /* SpellCheckers */ = {
+			isa = PBXGroup;
+			children = (
+				306064612C6B87BF00BC6350 /* NaverSpellChecker.swift */,
+				302B5FBF2C7756EB0043351B /* SpellChecker.swift */,
+			);
+			path = SpellCheckers;
+			sourceTree = "<group>";
+		};
 		30467E082C6B862A007A0F19 = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +247,7 @@
 		30467E132C6B862A007A0F19 /* machumbub */ = {
 			isa = PBXGroup;
 			children = (
+				302B5FBE2C7756B20043351B /* SpellCheckers */,
 				302B5FB82C7621100043351B /* Extensions */,
 				302B5FB32C7620860043351B /* Analytics */,
 				30D5E0C12C74D48B00295E53 /* GoogleService-Info.plist */,
@@ -242,13 +258,13 @@
 				30467E1D2C6B862B007A0F19 /* machumbub.entitlements */,
 				30467E1A2C6B862B007A0F19 /* Preview Content */,
 				30467E3F2C6B865B007A0F19 /* ContentView.swift */,
-				306064612C6B87BF00BC6350 /* SpellChecker.swift */,
 				306064632C6B87D400BC6350 /* SettingsView.swift */,
 				3060646A2C6B8E8C00BC6350 /* AppState.swift */,
 				3060646C2C6B957D00BC6350 /* AppDelegate.swift */,
 				306064722C6C8AE400BC6350 /* SpellCheckerExtension.swift */,
 				3042EB8E2C739E5100F69690 /* Constants.swift */,
 				30D5E0A12C74458C00295E53 /* Utils.swift */,
+				302B5FC22C7758690043351B /* Defaults.swift */,
 			);
 			path = machumbub;
 			sourceTree = "<group>";
@@ -345,6 +361,7 @@
 				306064662C6B8A7C00BC6350 /* KeyboardShortcuts */,
 				30D5E09F2C73A5D700295E53 /* LaunchAtLogin */,
 				30D5E0A72C74BD5C00295E53 /* Sparkle */,
+				30A0D8D82C775C1400F56515 /* Defaults */,
 			);
 			productName = machumbub;
 			productReference = 30467E112C6B862A007A0F19 /* machumbub.app */;
@@ -428,6 +445,7 @@
 				30D5E09E2C73A5D700295E53 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
 				30D5E0A62C74BD5B00295E53 /* XCRemoteSwiftPackageReference "Sparkle" */,
 				30D5E0BE2C74CF7C00295E53 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				302B5FC12C7757890043351B /* XCRemoteSwiftPackageReference "Defaults" */,
 			);
 			productRefGroup = 30467E122C6B862A007A0F19 /* Products */;
 			projectDirPath = "";
@@ -587,10 +605,12 @@
 				3042EB8D2C7393BC00F69690 /* ToastView.swift in Sources */,
 				30D5E0BC2C74C3B800295E53 /* UpdateChecker.swift in Sources */,
 				3060646B2C6B8E8C00BC6350 /* AppState.swift in Sources */,
+				302B5FC02C7756EB0043351B /* SpellChecker.swift in Sources */,
 				30467E402C6B865B007A0F19 /* ContentView.swift in Sources */,
-				306064622C6B87BF00BC6350 /* SpellChecker.swift in Sources */,
+				306064622C6B87BF00BC6350 /* NaverSpellChecker.swift in Sources */,
 				302B5FBA2C7621180043351B /* String.swift in Sources */,
 				3042EB8F2C739E5100F69690 /* Constants.swift in Sources */,
+				302B5FC32C7758690043351B /* Defaults.swift in Sources */,
 				302B5FBD2C7622170043351B /* AnalyticsEvents.swift in Sources */,
 				30467E152C6B862A007A0F19 /* machumbubApp.swift in Sources */,
 				306064712C6BB82D00BC6350 /* DraggableTextView.swift in Sources */,
@@ -952,6 +972,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		302B5FC12C7757890043351B /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		306064652C6B8A7C00BC6350 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
@@ -991,6 +1019,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 306064652C6B8A7C00BC6350 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
 			productName = KeyboardShortcuts;
+		};
+		30A0D8D82C775C1400F56515 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 302B5FC12C7757890043351B /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
 		};
 		30D5E09F2C73A5D700295E53 /* LaunchAtLogin */ = {
 			isa = XCSwiftPackageProductDependency;
