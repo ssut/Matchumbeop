@@ -36,7 +36,7 @@ jobs:
             }
       - uses: xt0rted/pull-request-comment-branch@v1 # check out branch of PR
         id: comment-branch
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         if: success()
         with:
           ref: ${{ steps.comment-branch.outputs.head_ref }}
@@ -57,7 +57,7 @@ jobs:
             exit 1
           fi
       - name: Save generated info
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v4
         with:
           path: |
             new_version
@@ -68,13 +68,6 @@ jobs:
           rm latest_changes
           rm title
           rm new_version
-      - name: Sync branch
-        uses: devmasx/merge-branch@master
-        with:
-          type: now
-          from_branch: ${{ steps.comment-branch.outputs.base_ref }}
-          target_branch: ${{ steps.comment-branch.outputs.head_ref }}
-          github_token: ${{ github.token }}
 
   archive:
     name: Build and export app
@@ -91,7 +84,7 @@ jobs:
           echo "title=$(cat artifacts/artifact/title)" >> $GITHUB_OUTPUT
       - uses: xt0rted/pull-request-comment-branch@v1 # check out branch of PR
         id: comment-branch
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         if: success()
         with:
           ref: ${{ steps.comment-branch.outputs.head_ref }}
@@ -142,7 +135,7 @@ jobs:
           cd Release
           ditto -c -k --sequesterRsrc --keepParent ${{ env.projname }}.app ${{ env.projname }}.zip # todo check perhaps cd .. missing
       - name: Upload achived app
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v4
         with:
           name: app
           path: Release/${{ env.projname }}.zip
@@ -156,7 +149,7 @@ jobs:
     steps:
       - uses: xt0rted/pull-request-comment-branch@v1 # check out branch of PR
         id: comment-branch
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         if: success()
         with:
           ref: ${{ steps.comment-branch.outputs.head_ref }}
@@ -193,7 +186,7 @@ jobs:
               -o docs/Support/appcast.xml \
               Release/
       - name: Save generated appcast
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v4
         with:
           name: appcast
           path: docs/Support/appcast.xml
@@ -210,7 +203,7 @@ jobs:
         run: |
           echo "Beta Release v${{ steps.info.outputs.new_version }} created" > $GITHUB_STEP_SUMMARY
 
-      - uses: actions/checkout@v3 # checkout again, directly on the main branch, as it's a prerelease
+      - uses: actions/checkout@v4 # checkout again, directly on the main branch, as it's a prerelease
         if: success()
       - name: Remove old appcast # remove old appcast
         run: rm -rf docs/Support/appcast.xml
@@ -235,7 +228,7 @@ jobs:
     steps:
       - uses: xt0rted/pull-request-comment-branch@v1 # check out branch of PR
         id: comment-branch
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         if: success()
         with:
           ref: ${{ steps.comment-branch.outputs.head_ref }}
@@ -302,11 +295,11 @@ jobs:
     steps:
       - uses: xt0rted/pull-request-comment-branch@v1 # check out branch of PR
         id: comment-branch
-      - uses: actions/checkout@v3 # checkout again, because the previous checkout is detached
+      - uses: actions/checkout@v4 # checkout again, because the previous checkout is detached
         with:
           ref: ${{ steps.comment-branch.outputs.head_ref }}
       - name: Merge PR # merge PR
-        uses: devmasx/merge-branch@master
+        uses: devmasx/merge-branch@v1
         with:
           type: now
           from_branch: ${{ steps.comment-branch.outputs.head_ref }}
