@@ -25,24 +25,7 @@ jobs:
       #   with:
       #     comment-id: ${{ github.event.comment.id }}
       #     reactions: eyes
-      - uses: actions/github-script@v6 # check if the PR is ready to be merged
-        with:
-          result-encoding: string
-          script: |
-            const pr = await github.rest.pulls.get({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.issue.number,
-            });
-            if (pr.data.draft || pr.data.mergeable_state !== "clean") {
-              core.setFailed("PR is not ready to be merged");
-            }
-      - uses: xt0rted/pull-request-comment-branch@v1 # check out branch of PR
-        id: comment-branch
       - uses: actions/checkout@v4
-        if: success()
-        with:
-          ref: ${{ steps.comment-branch.outputs.head_ref }}
       - name: Extract latest changes # generate release notes, version and title to use in the release
         id: latest_changes
         run: |
@@ -85,12 +68,7 @@ jobs:
         run: |
           echo "new_version=$(cat artifacts/artifact/new_version)" >> $GITHUB_OUTPUT
           echo "title=$(cat artifacts/artifact/title)" >> $GITHUB_OUTPUT
-      - uses: xt0rted/pull-request-comment-branch@v1 # check out branch of PR
-        id: comment-branch
       - uses: actions/checkout@v4
-        if: success()
-        with:
-          ref: ${{ steps.comment-branch.outputs.head_ref }}
       - name: Override versions in project # set new version in project
         run: |
           sed -i '' "s/_VERSION = $(xcrun agvtool what-version -terse)/_VERSION = ${{ steps.info.outputs.new_version }}/g" ${{ env.projname }}.xcodeproj/project.pbxproj;
@@ -145,17 +123,12 @@ jobs:
 
   pre-release:
     name: Create pre-release
-    runs-on: macos-12
+    runs-on: macos-14
     environment: production
     needs: archive
-    if: ${{ contains(github.event.comment.body, 'beta') }}
+    if: contains(github.ref, '-beta')
     steps:
-      - uses: xt0rted/pull-request-comment-branch@v1 # check out branch of PR
-        id: comment-branch
       - uses: actions/checkout@v4
-        if: success()
-        with:
-          ref: ${{ steps.comment-branch.outputs.head_ref }}
       - uses: actions/download-artifact@master # download all previously generated artifacts
         with:
           path: artifacts
@@ -227,14 +200,9 @@ jobs:
     runs-on: macos-14
     environment: production
     needs: archive
-    if: ${{ !contains(github.event.comment.body, 'beta') }}
+    if: ${{ !contains(github.ref, '-beta') }}
     steps:
-      - uses: xt0rted/pull-request-comment-branch@v1 # check out branch of PR
-        id: comment-branch
       - uses: actions/checkout@v4
-        if: success()
-        with:
-          ref: ${{ steps.comment-branch.outputs.head_ref }}
       - uses: actions/download-artifact@master # download all previously generated artifacts
         with:
           path: artifacts
@@ -296,11 +264,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [pre-release, release]
     steps:
-      - uses: xt0rted/pull-request-comment-branch@v1 # check out branch of PR
-        id: comment-branch
       - uses: actions/checkout@v4 # checkout again, because the previous checkout is detached
-        with:
-          ref: ${{ steps.comment-branch.outputs.head_ref }}
       - name: Merge PR # merge PR
         uses: devmasx/merge-branch@v1
         with:
