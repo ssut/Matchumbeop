@@ -112,6 +112,10 @@ jobs:
         uses: maxim-lobanov/setup-cocoapods@v1
         with:
           podfile-path: Machumbub/Podfile.lock
+      - name: Pod Install
+        run: |
+          cd Machumbub
+          pod install
       - name: Build and archive # create archive
         run: xcodebuild clean archive -project Machumbub/${{ env.projname }}.xcodeproj -scheme ${{ env.projname }} -archivePath ${{ env.projname }}
       - name: Export app # create .app
