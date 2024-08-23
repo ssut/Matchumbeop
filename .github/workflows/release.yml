@@ -71,7 +71,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Override versions in project # set new version in project
         run: |
-          sed -i '' "s/_VERSION = $(xcrun agvtool what-version -terse)/_VERSION = ${{ steps.info.outputs.new_version }}/g" ${{ env.projname }}.xcodeproj/project.pbxproj;
+          sed -i '' "s/_VERSION = $(xcrun agvtool what-version -terse)/_VERSION = ${{ steps.info.outputs.new_version }}/g" Machumbub/${{ env.projname }}.xcodeproj/project.pbxproj;
       - name:
           Install the Apple certificate and provisioning profile
           # install the Apple certificate and provisioning profile
@@ -108,7 +108,7 @@ jobs:
           sudo xcode-select -s "/Applications/Xcode_15.4.app"
           /usr/bin/xcodebuild -version
       - name: Build and archive # create archive
-        run: xcodebuild clean archive -project ${{ env.projname }}.xcodeproj -scheme ${{ env.projname }} -archivePath ${{ env.projname }}
+        run: xcodebuild clean archive -project Machumbub/${{ env.projname }}.xcodeproj -scheme ${{ env.projname }} -archivePath ${{ env.projname }}
       - name: Export app # create .app
         run: xcodebuild -exportArchive -archivePath "${{ env.projname }}.xcarchive" -exportPath Release -exportOptionsPlist ".github/releaser/export_options.plist"
       - name: Zip app # zip .app
@@ -252,7 +252,7 @@ jobs:
         with:
           file_pattern: |
             docs/Support/appcast.xml
-            ${{ env.projname }}.xcodeproj/project.pbxproj
+            Machumbub/${{ env.projname }}.xcodeproj/project.pbxproj
           commit_message: "Update version to v${{ steps.info.outputs.new_version }}"
       - name: Create summary # create summary for PR
         run: |
