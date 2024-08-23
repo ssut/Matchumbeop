@@ -59,6 +59,7 @@ jobs:
     name: Build and export app
     runs-on: macos-14
     needs: preparation
+    environment: production
     steps:
       - uses: actions/download-artifact@master # download all previously generated artifacts
         with:
@@ -127,6 +128,7 @@ jobs:
     environment: production
     needs: archive
     if: contains(github.ref, '-beta')
+    environment: production
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@master # download all previously generated artifacts
