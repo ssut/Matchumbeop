@@ -70,6 +70,10 @@ jobs:
           echo "new_version=$(cat artifacts/artifact/new_version)" >> $GITHUB_OUTPUT
           echo "title=$(cat artifacts/artifact/title)" >> $GITHUB_OUTPUT
       - uses: actions/checkout@v4
+      - uses: irgaly/xcode-cache@v1
+        with:
+          key: xcode-cache-deriveddata-${{ github.workflow }}-${{ github.sha }}
+          restore-keys: xcode-cache-deriveddata-${{ github.workflow }}-
       - name: Override versions in project # set new version in project
         run: |
           sed -i '' "s/_VERSION = $(xcrun agvtool what-version -terse)/_VERSION = ${{ steps.info.outputs.new_version }}/g" Machumbub/${{ env.projname }}.xcodeproj/project.pbxproj;
