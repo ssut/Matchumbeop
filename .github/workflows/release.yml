@@ -135,6 +135,13 @@ jobs:
         run: |
           cd Release
           ditto -c -k --sequesterRsrc --keepParent ${{ env.projname }}.app ${{ env.projname }}.zip # todo check perhaps cd .. missing
+      - name: Notary App
+        run: |
+          cd Release
+          xcrun notarytool submit ${{ env.projname }}.zip --team-id N7V29V6Q33 --apple-id ${{ env.NOTARY_ID }} --password ${{ env.NOTARY_PASSWORD }} --wait
+        env:
+          NOTARY_ID: ${{ secrets.NOTARY_ID }}
+          NOTARY_PASSWORD: ${{ secrets.NOTARY_PASSWORD }}
       - name: Upload achived app
         uses: actions/upload-artifact@v4
         with:
@@ -169,7 +176,7 @@ jobs:
           echo -n "$SPARKLE_PRIVATE_KEY" > ./.github/releaser/sparkle_private_key
       - name: Generate Sparkle notes # generate Sparkle release notes (convert Markdown to HTML)
         run: |
-          pip3 install -r .github/releaser/requirements.txt
+          pip3 install --break-system-packages -r .github/releaser/requirements.txt
           python3 ./.github/releaser/generate_html_for_sparkle_release.py
           mv Release/latest_changes.html Release/${{ env.projname }}.html
       - name: Update appcast # generate / update appcast.xml with edDSA key
