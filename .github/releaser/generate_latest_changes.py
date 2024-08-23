@@ -2,7 +2,7 @@
 # the format in the header: # version - title
 
 def get_latest_release_notes():
-    with open('Release_Notes.md', 'r') as f:
+    with open('CHANGELOG.md', 'r') as f:
         lines = f.readlines()
         first_header = lines[0].strip()
         title = first_header.split(' - ')[1]
