@@ -1,5 +1,3 @@
-# CHANGELOG
-
 ## [Unreleased]
 
 - No changes
