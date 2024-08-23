@@ -108,6 +108,10 @@ jobs:
         run: |
           sudo xcode-select -s "/Applications/Xcode_15.4.app"
           /usr/bin/xcodebuild -version
+      - name: setup-cocoapods
+        uses: maxim-lobanov/setup-cocoapods@v1
+        with:
+          podfile-path: Machumbub/Podfile.lock
       - name: Build and archive # create archive
         run: xcodebuild clean archive -project Machumbub/${{ env.projname }}.xcodeproj -scheme ${{ env.projname }} -archivePath ${{ env.projname }}
       - name: Export app # create .app
