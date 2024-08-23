@@ -1,3 +1,3 @@
-## [Unreleased]
+## v1.0 - 첫 릴리즈
 
-- No changes
+- 첫 릴리즈

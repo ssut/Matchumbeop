@@ -2,20 +2,20 @@
 # the format in the header: # version - title
 
 def get_latest_release_notes():
-    with open('CHANGELOG.md', 'r') as f:
-        lines = f.readlines()
-        first_header = lines[0].strip()
-        title = first_header.split(' - ')[1]
-        new_version = first_header.split(' - ')[0].replace('# ', '')
-        lines = lines[1:]
-        latest_changes = ""
-        for line in lines:
-            if line.strip().startswith('*'):
-                latest_changes += line.strip() + "\n"
-            elif line.strip().startswith('#'):
-                old_version = line.strip().split(' - ')[0].replace('# ', '')
-                break
-        return title, new_version, latest_changes
+  with open('CHANGELOG.md', 'r') as f:
+    lines = f.readlines()
+    first_header = lines[0].strip()
+    version, title = first_header.replace('## ', '').split(' - ', 1)
+    lines = lines[1:]
+    latest_changes = ""
+
+    for line in lines:
+        if line.strip().startswith('-'):
+            latest_changes += line.strip() + "\n"
+        elif line.strip().startswith('#'):
+            break
+
+    return title, version, latest_changes
 
 if __name__ == '__main__':
     title, new_version, latest_changes = get_latest_release_notes()
