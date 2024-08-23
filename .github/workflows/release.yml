@@ -128,7 +128,6 @@ jobs:
     environment: production
     needs: archive
     if: contains(github.ref, '-beta')
-    environment: production
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@master # download all previously generated artifacts
