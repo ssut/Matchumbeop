@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  projname: Machumbub
+  projname: machumbub
   beta-channel-name: "beta"
 
 jobs:
