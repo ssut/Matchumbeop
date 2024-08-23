@@ -18,11 +18,11 @@ jobs:
     name: Preparation job
     runs-on: ubuntu-24.04
     steps:
-      - name: Add reactions # adding reactions to the comment to show that the action is running
-        uses: peter-evans/create-or-update-comment@v2
-        with:
-          comment-id: ${{ github.event.comment.id }}
-          reactions: eyes
+      # - name: Add reactions # adding reactions to the comment to show that the action is running
+      #   uses: peter-evans/create-or-update-comment@v2
+      #   with:
+      #     comment-id: ${{ github.event.comment.id }}
+      #     reactions: eyes
       - uses: actions/github-script@v6 # check if the PR is ready to be merged
         with:
           result-encoding: string
@@ -310,15 +310,15 @@ jobs:
       - uses: geekyeggo/delete-artifact@v2
         with:
           name: "*"
-      - name: Add success reactions # Adding reactions to comment depending on result
-        if: ${{ contains(join(needs.*.result, ','), 'success') }}
-        uses: peter-evans/create-or-update-comment@v2
-        with:
-          comment-id: ${{ github.event.comment.id }}
-          reactions: rocket
-      - name: Add negative reaction
-        if: ${{ contains(join(needs.*.result, ','), 'failure') }}
-        uses: peter-evans/create-or-update-comment@v2
-        with:
-          comment-id: ${{ github.event.comment.id }}
-          reactions: confused
+      # - name: Add success reactions # Adding reactions to comment depending on result
+      #   if: ${{ contains(join(needs.*.result, ','), 'success') }}
+      #   uses: peter-evans/create-or-update-comment@v2
+      #   with:
+      #     comment-id: ${{ github.event.comment.id }}
+      #     reactions: rocket
+      # - name: Add negative reaction
+      #   if: ${{ contains(join(needs.*.result, ','), 'failure') }}
+      #   uses: peter-evans/create-or-update-comment@v2
+      #   with:
+      #     comment-id: ${{ github.event.comment.id }}
+      #     reactions: confused
