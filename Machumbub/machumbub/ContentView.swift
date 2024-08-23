@@ -2,6 +2,7 @@ import SwiftUI
 import Combine
 import Foundation
 import SwiftSoup
+import Defaults
 
 struct ContentView: View {
      @StateObject var appState = AppState.shared
@@ -10,6 +11,11 @@ struct ContentView: View {
      @State private var isSettingsButtonHovered = false
      
      @FocusState private var isTextEditorFocused: Bool
+     
+     @State private var lastSubmittedText: String = ""
+     @State private var lastUsedEngine: SpellCheckerEngine = .naver
+     
+     @Default(.spellCheckerEngine) var spellCheckerEngine: SpellCheckerEngine
      
      private let analytics: Analytics = MachumbubAnalytics.shared
      
@@ -33,25 +39,25 @@ struct ContentView: View {
                     .background(Color(NSColor.windowBackgroundColor))
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .overlay(alignment: .topTrailing) {
-                            Button(action: {
-                                 appState.openSettings()
-                            }) {
-                                Image(systemName: "gearshape")
-                                      .foregroundColor(.secondary)
-                            }
-                            .accessibilityHint("설정")
-                            .buttonStyle(BorderlessButtonStyle())
-                            .animation(.easeInOut, value: 0.1)
-                            .background(.clear)
-                            .opacity(isSettingsButtonHovered ? 1 : 0.5)
-                            .onHover { isHovered in
-                                 isSettingsButtonHovered = isHovered
-                                 if isHovered {
-                                      NSCursor.arrow.push()
-                                 } else {
-                                      NSCursor.pop()
-                                 }
-                            }
+                         Button(action: {
+                              appState.openSettings()
+                         }) {
+                              Image(systemName: "gearshape")
+                                   .foregroundColor(.secondary)
+                         }
+                         .accessibilityHint("설정")
+                         .buttonStyle(BorderlessButtonStyle())
+                         .animation(.easeInOut, value: 0.1)
+                         .background(.clear)
+                         .opacity(isSettingsButtonHovered ? 1 : 0.5)
+                         .onHover { isHovered in
+                              isSettingsButtonHovered = isHovered
+                              if isHovered {
+                                   NSCursor.arrow.push()
+                              } else {
+                                   NSCursor.pop()
+                              }
+                         }
                     }
                     .overlay(alignment: .bottomTrailing) {
                          Text("\(appState.text.count)")
@@ -70,16 +76,12 @@ struct ContentView: View {
                                         appState.text = String(appState.text.prefix(textLimit))
                                    }
                               }
-                    }
-                    .onKeyPress { press in
-                         if (!appState.isLoading && press.key == KeyEquivalent.return && press.modifiers.contains(EventModifiers.command)) {
-                              Task {
-                                   await self.appState.checkSpelling(text: appState.text)
-                                   self.analytics.send(.spellChecked(method: .inApp, length: appState.text.count))
-                              }
-                              return .handled
+                         
+                         Button(action: submitText) {
+                              EmptyView()
                          }
-                         return .ignored
+                         .keyboardShortcut(.return, modifiers: .command)
+                         .hidden()
                     }
                     .frame(height: 200)
                     .onAppear {
@@ -121,10 +123,8 @@ struct ContentView: View {
                               }) {
                                    Text("복사")
                               }
-                              //                               .buttonStyle(BorderlessButtonStyle())
                               .padding(.horizontal, 4)
                          }
-                         //                          HintView()
                          .frame(height: 10)
                          .padding(.bottom, 2)
                     }
@@ -135,7 +135,6 @@ struct ContentView: View {
           .background(Color(NSColor.windowBackgroundColor))
           .cornerRadius(12)
           .shadow(radius: 10)
-          //            .frame(minWidth: 480, minHeight: 0, maxHeight: .infinity, alignment: .top)
           .frame(width: 480, height: calculateHeight(), alignment: .top)
           .overlay(
                VStack {
@@ -154,10 +153,23 @@ struct ContentView: View {
           let resultHeight = appState.result != nil ? 300 : 0
           return CGFloat(225 + resultHeight)
      }
+     
+     private func submitText() {
+         if !appState.isLoading &&
+            (appState.text != lastSubmittedText || spellCheckerEngine != lastUsedEngine) {
+             Task {
+                 await self.appState.checkSpelling(text: appState.text)
+                 self.analytics.send(.spellChecked(method: .inApp, length: appState.text.count))
+                 
+                 lastSubmittedText = appState.text
+                 lastUsedEngine = spellCheckerEngine
+             }
+         }
+     }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+     static var previews: some View {
+          ContentView()
+     }
 }
