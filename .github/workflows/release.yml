@@ -150,7 +150,7 @@ jobs:
   pre-release:
     name: Create pre-release
     runs-on: macos-12
-    environment: deploy-beta
+    environment: production
     needs: archive
     if: ${{ contains(github.event.comment.body, 'beta') }}
     steps:
@@ -229,7 +229,7 @@ jobs:
   release:
     name: "Create Release"
     runs-on: macos-14
-    environment: deploy-release
+    environment: production
     needs: archive
     if: ${{ !contains(github.event.comment.body, 'beta') }}
     steps:
