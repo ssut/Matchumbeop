@@ -302,15 +302,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: [pre-release, release]
     steps:
-      - uses: actions/checkout@v4 # checkout again, because the previous checkout is detached
-      - name: Merge PR # merge PR
-        uses: devmasx/merge-branch@v1
-        with:
-          type: now
-          from_branch: ${{ steps.comment-branch.outputs.head_ref }}
-          target_branch: ${{ steps.comment-branch.outputs.base_ref }}
-          github_token: ${{ github.token }}
-          message: "chore(release): Update version to ${{ steps.info.outputs.new_version }}"
+      # - uses: actions/checkout@v4 # checkout again, because the previous checkout is detached
+      # - name: Merge PR # merge PR
+      #   uses: devmasx/merge-branch@v1
+      #   with:
+      #     type: now
+      #     from_branch: ${{ steps.comment-branch.outputs.head_ref }}
+      #     target_branch: ${{ steps.comment-branch.outputs.base_ref }}
+      #     github_token: ${{ github.token }}
+      #     message: "chore(release): Update version to ${{ steps.info.outputs.new_version }}"
       - uses: geekyeggo/delete-artifact@v2
         with:
           name: "*"

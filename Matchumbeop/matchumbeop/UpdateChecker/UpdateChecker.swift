@@ -4,6 +4,7 @@ public final class UpdateChecker {
     let updater: SPUUpdater
     let hostBundleFound: Bool
     let delegate: UpdaterDelegate
+
     public weak var updateCheckerDelegate: UpdateCheckerDelegate? {
         get { delegate.updateCheckerDelegate }
         set { delegate.updateCheckerDelegate = newValue }
