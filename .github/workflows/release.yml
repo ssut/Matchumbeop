@@ -131,17 +131,20 @@ jobs:
         run: xcodebuild clean archive -workspace Machumbub/${{ env.projname }}.xcworkspace -scheme ${{ env.projname }} -archivePath ${{ env.projname }} -destination 'generic/platform=macOS'
       - name: Export app # create .app
         run: xcodebuild -exportArchive -archivePath "${{ env.projname }}.xcarchive" -exportPath Release -exportOptionsPlist ".github/releaser/export_options.plist"
+      - name: Notary App
+        run: |
+          cd Release
+          echo "notarizing ${{ env.projname }}.app"
+          xcrun notarytool submit ${{ env.projname }}.app --team-id N7V29V6Q33 --apple-id ${{ env.NOTARY_ID }} --password ${{ env.NOTARY_PASSWORD }} --wait
+          echo "stapling ${{ env.projname }}.app"
+          xcrun stapler staple ${{ env.projname }}.app
+        env:
+          NOTARY_ID: ${{ secrets.NOTARY_ID }}
+          NOTARY_PASSWORD: ${{ secrets.NOTARY_PASSWORD }}
       - name: Zip app # zip .app
         run: |
           cd Release
           ditto -c -k --sequesterRsrc --keepParent ${{ env.projname }}.app ${{ env.projname }}.zip # todo check perhaps cd .. missing
-      - name: Notary App
-        run: |
-          cd Release
-          xcrun notarytool submit ${{ env.projname }}.zip --team-id N7V29V6Q33 --apple-id ${{ env.NOTARY_ID }} --password ${{ env.NOTARY_PASSWORD }} --wait
-        env:
-          NOTARY_ID: ${{ secrets.NOTARY_ID }}
-          NOTARY_PASSWORD: ${{ secrets.NOTARY_PASSWORD }}
       - name: Upload achived app
         uses: actions/upload-artifact@v4
         with:
@@ -253,7 +256,7 @@ jobs:
           rm -rf Release/*.plist
       - name: Preparate Sparkle # generate Sparkle release notes (convert Markdown to HTML), remove beta item if present
         run: |
-          pip3 install -r .github/releaser/requirements.txt
+          pip3 install --break-system-packages -r .github/releaser/requirements.txt
           python3 ./.github/releaser/generate_html_for_sparkle_release.py
           mv Release/latest_changes.html Release/${{ env.projname }}.html
           python3 ./.github/releaser/remove_last_item_appcast.py
