@@ -157,6 +157,10 @@ jobs:
     environment: production
     needs: archive
     if: contains(github.ref, '-beta')
+    permissions:
+      contents: write
+      packages: write
+      actions: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@master # download all previously generated artifacts
@@ -187,7 +191,7 @@ jobs:
           ./.github/releaser/generate_appcast \
               --ed-key-file .github/releaser/sparkle_private_key \
               --link https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/releases \
-              --download-url-prefix https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/releases/download/v${{ steps.info.outputs.new_version }}-beta/ \
+              --download-url-prefix https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/releases/download/${{ steps.info.outputs.new_version }}-beta/ \
               --channel ${{ env.beta-channel-name }} \
               -o docs/Support/appcast.xml \
               Release/
@@ -199,15 +203,15 @@ jobs:
       - name: Create GitHub beta release # Upload .zip to GitHub release
         uses: softprops/action-gh-release@v1
         with:
-          name: v${{ steps.info.outputs.new_version }}b - ${{ steps.info.outputs.title }}
-          tag_name: v${{ steps.info.outputs.new_version }}-beta
+          name: ${{ steps.info.outputs.new_version }}b - ${{ steps.info.outputs.title }}
+          tag_name: ${{ steps.info.outputs.new_version }}-beta
           fail_on_unmatched_files: true
           body_path: latest_changes
           files: Release/${{ env.projname }}.zip
           prerelease: true
       - name: Create summary # create summary for PR
         run: |
-          echo "Beta Release v${{ steps.info.outputs.new_version }} created" > $GITHUB_STEP_SUMMARY
+          echo "Beta Release ${{ steps.info.outputs.new_version }} created" > $GITHUB_STEP_SUMMARY
 
       - uses: actions/checkout@v4 # checkout again, directly on the main branch, as it's a prerelease
         if: success()
@@ -223,7 +227,7 @@ jobs:
         id: commit-appcast
         with:
           file_pattern: docs/Support/appcast.xml
-          commit_message: "Update appcast with beta release for v${{ steps.info.outputs.new_version }}"
+          commit_message: "chore(appcast): update appcast with beta release for ${{ steps.info.outputs.new_version }}"
 
   release:
     name: "Create Release"
@@ -231,6 +235,10 @@ jobs:
     environment: production
     needs: archive
     if: ${{ !contains(github.ref, '-beta') }}
+    permissions:
+      contents: write
+      packages: write
+      actions: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@master # download all previously generated artifacts
@@ -265,14 +273,14 @@ jobs:
           ./.github/releaser/generate_appcast \
               --ed-key-file .github/releaser/sparkle_private_key \
               --link https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/releases \
-              --download-url-prefix https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/releases/download/v${{ steps.info.outputs.new_version }}/ \
+              --download-url-prefix https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/releases/download/${{ steps.info.outputs.new_version }}/ \
               -o docs/Support/appcast.xml \
               Release/
       - name: Create GitHub release # Upload .zip to GitHub release
         uses: softprops/action-gh-release@v1
         with:
-          name: v${{ steps.info.outputs.new_version }} - ${{ steps.info.outputs.title }}
-          tag_name: v${{ steps.info.outputs.new_version }}
+          name: ${{ steps.info.outputs.new_version }} - ${{ steps.info.outputs.title }}
+          tag_name: ${{ steps.info.outputs.new_version }}
           fail_on_unmatched_files: true
           body_path: latest_changes
           files: Release/${{ env.projname }}.zip
@@ -283,10 +291,10 @@ jobs:
           file_pattern: |
             docs/Support/appcast.xml
             Matchumbeop/${{ env.projname }}.xcodeproj/project.pbxproj
-          commit_message: "Update version to v${{ steps.info.outputs.new_version }}"
+          commit_message: "chore(release): update version to ${{ steps.info.outputs.new_version }}"
       - name: Create summary # create summary for PR
         run: |
-          echo "Release v${{ steps.info.outputs.new_version }} created." > $GITHUB_STEP_SUMMARY
+          echo "Release ${{ steps.info.outputs.new_version }} created." > $GITHUB_STEP_SUMMARY
 
   ending:
     name: Ending job
@@ -302,7 +310,7 @@ jobs:
           from_branch: ${{ steps.comment-branch.outputs.head_ref }}
           target_branch: ${{ steps.comment-branch.outputs.base_ref }}
           github_token: ${{ github.token }}
-          message: "Release version v${{ steps.info.outputs.new_version }}"
+          message: "chore(release): Update version to ${{ steps.info.outputs.new_version }}"
       - uses: geekyeggo/delete-artifact@v2
         with:
           name: "*"
