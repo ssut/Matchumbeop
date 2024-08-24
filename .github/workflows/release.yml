@@ -140,8 +140,8 @@ jobs:
           cd Release
           echo "notarizing ${{ env.projname }}.zip"
           xcrun notarytool submit ${{ env.projname }}.zip --team-id N7V29V6Q33 --apple-id ${{ env.NOTARY_ID }} --password ${{ env.NOTARY_PASSWORD }} --wait
-          echo "stapling ${{ env.projname }}.zip"
-          xcrun stapler staple ${{ env.projname }}.zip
+          # echo "stapling ${{ env.projname }}.zip"
+          # xcrun stapler staple ${{ env.projname }}.zip
         env:
           NOTARY_ID: ${{ secrets.NOTARY_ID }}
           NOTARY_PASSWORD: ${{ secrets.NOTARY_PASSWORD }}
