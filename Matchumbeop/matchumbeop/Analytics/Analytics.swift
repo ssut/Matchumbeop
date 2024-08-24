@@ -16,17 +16,17 @@ extension Analytics {
     }
 }
 
-final class MachumbubAnalytics: Analytics {
-    static let shared = MachumbubAnalytics()
-    
+final class MatchumbeopAnalytics: Analytics {
+    static let shared = MatchumbeopAnalytics()
+
     private let firebaseAnalyticsEngine: AnalyticsEngine
-    
+
     private init() {
         self.firebaseAnalyticsEngine = FirebaseAnalyticsEngine()
     }
-    
+
     func send(_ event: AnalyticsEvent, forceSend: Bool) {
-        if event is MachumbubAnalyticsEvent {
+        if event is MatchumbeopAnalyticsEvent {
             self.firebaseAnalyticsEngine.sendAnalyticsEvent(named: event.name, parameters: event.parameters, forceSend: forceSend)
         }
     }

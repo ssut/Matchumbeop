@@ -6,7 +6,7 @@ import Defaults
 @MainActor
 final class AppState: ObservableObject {
     static let shared = AppState(appDelegate: nil)
-    
+
     private weak var appDelegate: AppDelegate?
 
     @Published var text = ""
@@ -14,45 +14,45 @@ final class AppState: ObservableObject {
     @Published var result: AttributedString?
     @Published var errorMessage: String?
     @Published var showToast = false
-    
+
     @Published var appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-    
-    private lazy var analytics: Analytics = MachumbubAnalytics.shared
-    
+
+    private lazy var analytics: Analytics = MatchumbeopAnalytics.shared
+
     @Published var spellChecker: SpellChecker
     private var cancellables = Set<AnyCancellable>()
-    
+
     init(appDelegate: AppDelegate?) {
         self.spellChecker = AppState.createSpellChecker(for: Defaults[.spellCheckerEngine])
         self.appDelegate = appDelegate
-        
+
         Defaults.publisher(.spellCheckerEngine)
             .removeDuplicates()
             .sink { [weak self] value in
                 self?.updateSpellChecker(for: value.newValue)
             }
             .store(in: &cancellables)
-        
+
         KeyboardShortcuts.onKeyUp(for: .togglePopover) { [weak self] in
             self?.toggleWindow()
         }
-        
+
 //        KeyboardShortcuts.onKeyUp(for: .checkSelection) { [weak self] in
 //            if let text = getSelectedText() {
 //                self?.pasteAndCheck(text: text)
 //            }
 //        }
-        
+
         KeyboardShortcuts.onKeyUp(for: .pasteAndCheck) { [weak self] in
             let text = NSPasteboard.general.string(forType: .string) ?? ""
             self?.pasteAndCheck(input: text)
-            
+
             if !text.isEmpty {
                 self?.analytics.send(.spellChecked(method: .clipboard, length: text.count))
             }
         }
     }
-    
+
     private static func createSpellChecker(for engine: SpellCheckerEngine) -> SpellChecker {
         switch engine {
         case .naver:
@@ -62,7 +62,7 @@ final class AppState: ObservableObject {
 //            return NaverSpellChecker()
         }
     }
-    
+
     private func updateSpellChecker(for engine: SpellCheckerEngine) {
         self.spellChecker = AppState.createSpellChecker(for: engine)
     }
@@ -70,36 +70,36 @@ final class AppState: ObservableObject {
     func setAppDelegate(_ appDelegate: AppDelegate) {
         self.appDelegate = appDelegate
     }
-    
+
     func openSettings() {
         appDelegate?.openSettings()
     }
-    
+
     func toggleWindow() {
         if appDelegate?.togglePopover() == true {
             self.analytics.send(.applicationDidBecomeActive(method: .keyboardShortcut))
         }
     }
-    
+
     func checkForUpdate() {
         appDelegate?.checkForUpdate()
     }
-    
+
     func pasteAndCheck(input: String) {
         appDelegate?.pasteAndCheck(input: input)
     }
-    
+
     @MainActor
     func checkSpelling(text: String) async {
         guard !text.isEmpty else {
             self.result = nil
             return
         }
-        
+
         isLoading = true
         errorMessage = nil
         result = nil
-        
+
         do {
             let htmlString: String
             if text.count > 300 {
@@ -109,7 +109,7 @@ final class AppState: ObservableObject {
                 let response = try await spellChecker.correctText(text, eol: "\n")
                 htmlString = response.message.result.html
             }
-            
+
             DispatchQueue.main.async {
                 self.result = formatCorrectedText(htmlString)
                 self.isLoading = false

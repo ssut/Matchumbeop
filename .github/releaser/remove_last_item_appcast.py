@@ -31,9 +31,9 @@ if __name__ == '__main__':
     with open('new_version', 'r') as new_version_file:
         new_version = new_version_file.read()
         last_item = get_last_item_in_appcast()
-        if(new_version in last_item):
+        if new_version in last_item:
             print("Last item in appcast.xml contains new_version")
-            if(item_channel_is_beta(last_item)):
+            if item_channel_is_beta(last_item):
                 remove_last_item_in_appcast()
                 print("removed last item in appcast.xml")
         else:

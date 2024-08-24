@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ssut/machumbub/main/icon.png" alt="Icon" width="120px" />
+  <img src="https://raw.githubusercontent.com/ssut/matchumbeop/main/icon.png" alt="Icon" width="120px" />
 </p>
-<h1 align="center">Machumbub</h1>
+<h1 align="center">Matchumbeop</h1>
 <p align="center">
 한글 맞춤법 검사기 for macOS
 </p>

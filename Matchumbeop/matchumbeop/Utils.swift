@@ -7,12 +7,12 @@ func getSelectedText() -> String? {
 
     var selectedTextValue: AnyObject?
     let errorCode = AXUIElementCopyAttributeValue(systemWideElement, kAXFocusedUIElementAttribute as CFString, &selectedTextValue)
-    
+
     if errorCode == .success {
         let selectedTextElement = selectedTextValue as! AXUIElement
         var selectedText: AnyObject?
         let textErrorCode = AXUIElementCopyAttributeValue(selectedTextElement, kAXSelectedTextAttribute as CFString, &selectedText)
-        
+
         if textErrorCode == .success, let selectedTextString = selectedText as? String {
             return selectedTextString
         } else {
@@ -27,7 +27,7 @@ func formatCorrectedText(_ htmlString: String) -> AttributedString? {
      do {
           let document = try SwiftSoup.parseBodyFragment(htmlString)
           let body = document.body()
-          
+
           let attributedString = NSMutableAttributedString()
           for node in body?.getChildNodes() ?? [] {
                if let textNode = node as? TextNode {
@@ -40,26 +40,26 @@ func formatCorrectedText(_ htmlString: String) -> AttributedString? {
                     } else if tagName == "em" {
                          let elementText = try element.text()
                          var attrs: [NSAttributedString.Key: Any] = [:]
-                         
+
                          if let className = try? element.className() {
                               switch className {
                               case "green_text":
                                    attrs[.foregroundColor] = NSColor(Green).withAlphaComponent(1)
-                                   
+
                               case "violet_text":
                                    attrs[.foregroundColor] = NSColor(Violet).withAlphaComponent(1)
-                                   
+
                               case "red_text":
                                    attrs[.foregroundColor] = NSColor(Red).withAlphaComponent(1)
-                                   
+
                               case "blue_text":
                                    attrs[.foregroundColor] = NSColor(Blue).withAlphaComponent(1)
-                                   
+
                               default:
                                    break
                               }
                          }
-                         
+
                          let attributedElement = NSAttributedString(string: elementText, attributes: attrs)
                          attributedString.append(attributedElement)
                     } else {
@@ -68,7 +68,7 @@ func formatCorrectedText(_ htmlString: String) -> AttributedString? {
                     }
                }
           }
-          
+
           return AttributedString(attributedString)
      } catch {
           print(error)
@@ -84,9 +84,9 @@ func locateHostBundleURL(url: URL) -> URL? {
             return nextURL
         }
     }
-    
+
     let devAppURL = url
         .deletingLastPathComponent()
-        .appendingPathComponent("Machumbub Dev.app")
+        .appendingPathComponent("Matchumbeop Dev.app")
     return devAppURL
 }

@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  projname: machumbub
+  projname: matchumbeop
   beta-channel-name: "beta"
 
 jobs:
@@ -76,7 +76,7 @@ jobs:
           restore-keys: xcode-cache-deriveddata-${{ github.workflow }}-
       - name: Override versions in project # set new version in project
         run: |
-          sed -i '' "s/_VERSION = $(xcrun agvtool what-version -terse)/_VERSION = ${{ steps.info.outputs.new_version }}/g" Machumbub/${{ env.projname }}.xcodeproj/project.pbxproj;
+          sed -i '' "s/_VERSION = $(xcrun agvtool what-version -terse)/_VERSION = ${{ steps.info.outputs.new_version }}/g" Matchumbeop/${{ env.projname }}.xcodeproj/project.pbxproj;
       - name:
           Install the Apple certificate and provisioning profile
           # install the Apple certificate and provisioning profile
@@ -122,13 +122,13 @@ jobs:
       - name: setup-cocoapods
         uses: maxim-lobanov/setup-cocoapods@v1
         with:
-          podfile-path: Machumbub/Podfile.lock
+          podfile-path: Matchumbeop/Podfile.lock
       - name: Pod Install
         run: |
-          cd Machumbub
+          cd Matchumbeop
           pod install
       - name: Build and archive # create archive
-        run: xcodebuild clean archive -workspace Machumbub/${{ env.projname }}.xcworkspace -scheme ${{ env.projname }} -archivePath ${{ env.projname }} -destination 'generic/platform=macOS'
+        run: xcodebuild clean archive -workspace Matchumbeop/${{ env.projname }}.xcworkspace -scheme ${{ env.projname }} -archivePath ${{ env.projname }} -destination 'generic/platform=macOS'
       - name: Export app # create .app
         run: xcodebuild -exportArchive -archivePath "${{ env.projname }}.xcarchive" -exportPath Release -exportOptionsPlist ".github/releaser/export_options.plist"
       - name: Zip app # zip .app
@@ -282,7 +282,7 @@ jobs:
         with:
           file_pattern: |
             docs/Support/appcast.xml
-            Machumbub/${{ env.projname }}.xcodeproj/project.pbxproj
+            Matchumbeop/${{ env.projname }}.xcodeproj/project.pbxproj
           commit_message: "Update version to v${{ steps.info.outputs.new_version }}"
       - name: Create summary # create summary for PR
         run: |

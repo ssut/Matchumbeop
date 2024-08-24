@@ -11,16 +11,16 @@ extension KeyboardShortcuts.Name {
 
 struct SettingsView: View {
     @StateObject var appState = AppState.shared
-    
+
     @Default(.spellCheckerEngine) var spellCheckerEngine: SpellCheckerEngine
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack(alignment: .top) {
                 HStack(alignment: .top) {
-                    Text("Machumbub: ").font(.title).fontWeight(.heavy)
+                    Text("Matchumbeop: ").font(.title).fontWeight(.heavy)
                     + Text("한글 ").font(.title)
-                    + Text("마춤뻡")
+                    + Text("매츔법")
                         .font(.title)
                         .strikethrough()
                         .foregroundColor(Color.primary.opacity(0.6))
@@ -31,9 +31,9 @@ struct SettingsView: View {
                         .foregroundColor(.secondary)
                         .padding(.bottom, 4)
                 }
-                
+
                 Spacer()
-                
+
                 Button(action: {
                     appState.checkForUpdate()
                 }) {
@@ -46,15 +46,15 @@ struct SettingsView: View {
                 .focusable(false)
             }
             .padding()
-            
+
             SettingsDivider()
-            
+
             VStack(alignment: .leading) {
                 Grid(alignment: .leading) {
                     GridRow(alignment: .firstTextBaseline) {
                         Text("검사 엔진:")
                             .gridColumnAlignment(.trailing)
-                        
+
                         VStack(alignment: .leading) {
                             Picker("", selection: $spellCheckerEngine) {
                                 ForEach(SpellCheckerEngine.allCases) { engine in
@@ -62,7 +62,7 @@ struct SettingsView: View {
                                 }
                             }
                             .pickerStyle(RadioGroupPickerStyle())
-                            
+
                             Text("")
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
@@ -71,14 +71,14 @@ struct SettingsView: View {
                         .gridColumnAlignment(.leading)
                     }
 
-                    
+
                     GridRow(alignment: .firstTextBaseline) {
                         Text("단축키:")
                             .gridColumnAlignment(.trailing)
-                        
+
                         VStack(alignment: .leading) {
                             KeyboardShortcuts.Recorder("", name: .togglePopover)
-                            
+
                             Text("")
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
@@ -86,7 +86,7 @@ struct SettingsView: View {
                         }
                         .gridColumnAlignment(.leading)
                     }
-                    
+
                     //                GridRow(alignment: .firstTextBaseline) {
                     //                    Text("자동 복사 단축키:")
                     //
@@ -99,23 +99,23 @@ struct SettingsView: View {
                     //                            .padding(.leading, 10)
                     //                    }
                     //                }
-                    
+
                     GridRow(alignment: .firstTextBaseline) {
                         Text("붙여넣기 단축키:")
-                        
+
                         VStack(alignment: .leading) {
                             KeyboardShortcuts.Recorder("", name: .pasteAndCheck)
-                            
+
                             Text("클립보드에 있는 텍스트를 자동으로 붙여넣어 검사하는 단축키를 지정합니다.")
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
                                 .padding(.leading, 10)
                         }
                     }
-                    
+
                     GridRow(alignment: .firstTextBaseline) {
                         Text("")
-                        
+
                         VStack(alignment: .leading) {
                             LaunchAtLogin.Toggle {
                                 Text("맥 시작 시 자동 실행") }
@@ -125,9 +125,9 @@ struct SettingsView: View {
                 }
             }
             .padding()
-            
+
             SettingsDivider()
-            
+
             VStack(alignment: .leading) {
                 Text("Disclaimer:")
                     .font(.subheadline)
@@ -137,9 +137,9 @@ struct SettingsView: View {
                     .font(.footnote)
                     .foregroundColor(.secondary)
                     .multilineTextAlignment(.leading)
-                
+
                 HStack(spacing: 16) {
-                    Link(destination: URL(string: "https://github.com/ssut/machumbub")!)
+                    Link(destination: URL(string: "https://github.com/ssut/matchumbeop")!)
                     {
                         HStack {
                             Image(systemName: "link")
@@ -150,7 +150,7 @@ struct SettingsView: View {
                     }
                     .foregroundColor(.accentColor)
                     .focusable(false)
-                    
+
                     Link(destination: URL(string: "https://www.buymeacoffee.com/suhunhan95")!) {
                         HStack(spacing: 2) {
                             Image(systemName: "cup.and.saucer.fill")

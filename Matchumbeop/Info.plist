@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SUPublicEDKey</key>
-	<string>oXSo82AWzS6y7odVowozqI8jg7p2Ub6T4WxopBk7ysQ</string>
-	<key>SUFeedURL</key>
-	<string>https://ssut.github.io/machumbub/Support/appcast.xml</string>
 	<key>CFBundleIconFile</key>
 	<string>AppIcon.icns</string>
 	<key>NSServices</key>
@@ -14,12 +10,12 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>Check Spelling with Machumbub</string>
+				<string>Check Spelling with Matchumbeop</string>
 			</dict>
 			<key>NSMessage</key>
-			<string>machumbubServiceRequest:</string>
+			<string>matchumbeopServiceRequest:</string>
 			<key>NSPortName</key>
-			<string>MachumbubService</string>
+			<string>MatchumbeopService</string>
 			<key>NSReturnTypes</key>
 			<array>
 				<string>NSStringPboardType</string>
@@ -34,5 +30,9 @@
 			<string>Check spelling of selected text</string>
 		</dict>
 	</array>
+	<key>SUFeedURL</key>
+	<string>https://ssut.github.io/matchumbeop/Support/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>oXSo82AWzS6y7odVowozqI8jg7p2Ub6T4WxopBk7ysQ</string>
 </dict>
 </plist>

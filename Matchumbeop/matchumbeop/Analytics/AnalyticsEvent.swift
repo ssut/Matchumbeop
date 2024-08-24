@@ -10,4 +10,4 @@ class AnalyticsEvent {
     }
 }
 
-final class MachumbubAnalyticsEvent: AnalyticsEvent {}
+final class MatchumbeopAnalyticsEvent: AnalyticsEvent {}

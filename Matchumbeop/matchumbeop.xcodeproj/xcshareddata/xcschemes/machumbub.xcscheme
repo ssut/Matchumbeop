@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "30467E102C6B862A007A0F19"
-               BuildableName = "machumbub.app"
-               BlueprintName = "machumbub"
-               ReferencedContainer = "container:machumbub.xcodeproj">
+               BuildableName = "matchumbeop.app"
+               BlueprintName = "matchumbeop"
+               ReferencedContainer = "container:matchumbeop.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,9 +35,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "30467E212C6B862B007A0F19"
-               BuildableName = "machumbubTests.xctest"
-               BlueprintName = "machumbubTests"
-               ReferencedContainer = "container:machumbub.xcodeproj">
+               BuildableName = "matchumbeopTests.xctest"
+               BlueprintName = "matchumbeopTests"
+               ReferencedContainer = "container:matchumbeop.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -46,9 +46,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "30467E2B2C6B862B007A0F19"
-               BuildableName = "machumbubUITests.xctest"
-               BlueprintName = "machumbubUITests"
-               ReferencedContainer = "container:machumbub.xcodeproj">
+               BuildableName = "matchumbeopUITests.xctest"
+               BlueprintName = "matchumbeopUITests"
+               ReferencedContainer = "container:matchumbeop.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -68,9 +68,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30467E102C6B862A007A0F19"
-            BuildableName = "machumbub.app"
-            BlueprintName = "machumbub"
-            ReferencedContainer = "container:machumbub.xcodeproj">
+            BuildableName = "matchumbeop.app"
+            BlueprintName = "matchumbeop"
+            ReferencedContainer = "container:matchumbeop.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -91,9 +91,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30467E102C6B862A007A0F19"
-            BuildableName = "machumbub.app"
-            BlueprintName = "machumbub"
-            ReferencedContainer = "container:machumbub.xcodeproj">
+            BuildableName = "matchumbeop.app"
+            BlueprintName = "matchumbeop"
+            ReferencedContainer = "container:matchumbeop.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

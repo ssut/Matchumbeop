@@ -18,11 +18,11 @@
 		3042EB8B2C73810400F69690 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042EB8A2C73810400F69690 /* HintView.swift */; };
 		3042EB8D2C7393BC00F69690 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042EB8C2C7393BC00F69690 /* ToastView.swift */; };
 		3042EB8F2C739E5100F69690 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042EB8E2C739E5100F69690 /* Constants.swift */; };
-		30467E152C6B862A007A0F19 /* machumbubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E142C6B862A007A0F19 /* machumbubApp.swift */; };
+		30467E152C6B862A007A0F19 /* matchumbeopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E142C6B862A007A0F19 /* matchumbeopApp.swift */; };
 		30467E1C2C6B862B007A0F19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30467E1B2C6B862B007A0F19 /* Preview Assets.xcassets */; };
-		30467E272C6B862B007A0F19 /* machumbubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E262C6B862B007A0F19 /* machumbubTests.swift */; };
-		30467E312C6B862B007A0F19 /* machumbubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E302C6B862B007A0F19 /* machumbubUITests.swift */; };
-		30467E332C6B862B007A0F19 /* machumbubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E322C6B862B007A0F19 /* machumbubUITestsLaunchTests.swift */; };
+		30467E272C6B862B007A0F19 /* matchumbeopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E262C6B862B007A0F19 /* matchumbeopTests.swift */; };
+		30467E312C6B862B007A0F19 /* matchumbeopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E302C6B862B007A0F19 /* matchumbeopUITests.swift */; };
+		30467E332C6B862B007A0F19 /* matchumbeopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E322C6B862B007A0F19 /* matchumbeopUITestsLaunchTests.swift */; };
 		30467E402C6B865B007A0F19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30467E3F2C6B865B007A0F19 /* ContentView.swift */; };
 		306064622C6B87BF00BC6350 /* NaverSpellChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306064612C6B87BF00BC6350 /* NaverSpellChecker.swift */; };
 		306064642C6B87D400BC6350 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306064632C6B87D400BC6350 /* SettingsView.swift */; };
@@ -37,16 +37,16 @@
 		30D5E0A22C74458C00295E53 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5E0A12C74458C00295E53 /* Utils.swift */; };
 		30D5E0A52C74BB4800295E53 /* SettingsDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5E0A42C74BB4800295E53 /* SettingsDivider.swift */; };
 		30D5E0A82C74BD5C00295E53 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 30D5E0A72C74BD5C00295E53 /* Sparkle */; };
-		30D5E0B02C74C17200295E53 /* Pods_machumbub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0A92C74C15700295E53 /* Pods_machumbub.framework */; };
-		30D5E0B12C74C17200295E53 /* Pods_machumbub.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0A92C74C15700295E53 /* Pods_machumbub.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		30D5E0B42C74C17C00295E53 /* Pods_machumbubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0B32C74C17C00295E53 /* Pods_machumbubTests.framework */; };
-		30D5E0B52C74C17C00295E53 /* Pods_machumbubTests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0B32C74C17C00295E53 /* Pods_machumbubTests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		30D5E0B82C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0B72C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework */; };
-		30D5E0B92C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0B72C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30D5E0B02C74C17200295E53 /* Pods_matchumbeop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0A92C74C15700295E53 /* Pods_matchumbeop.framework */; };
+		30D5E0B12C74C17200295E53 /* Pods_matchumbeop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0A92C74C15700295E53 /* Pods_matchumbeop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30D5E0B42C74C17C00295E53 /* Pods_matchumbeopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0B32C74C17C00295E53 /* Pods_matchumbeopTests.framework */; };
+		30D5E0B52C74C17C00295E53 /* Pods_matchumbeopTests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0B32C74C17C00295E53 /* Pods_matchumbeopTests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30D5E0B82C74C18200295E53 /* Pods_matchumbeop_matchumbeopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0B72C74C18200295E53 /* Pods_matchumbeop_matchumbeopUITests.framework */; };
+		30D5E0B92C74C18200295E53 /* Pods_matchumbeop_matchumbeopUITests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30D5E0B72C74C18200295E53 /* Pods_matchumbeop_matchumbeopUITests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		30D5E0BC2C74C3B800295E53 /* UpdateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5E0BB2C74C3B800295E53 /* UpdateChecker.swift */; };
 		30D5E0C22C74D48B00295E53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30D5E0C12C74D48B00295E53 /* GoogleService-Info.plist */; };
 		30D5E0C32C74EA3600295E53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30467E182C6B862B007A0F19 /* Assets.xcassets */; };
-		A34C9D341046A89AB0A1E0ED /* Pods_machumbub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62BB37B3BA998620C6BA6E1 /* Pods_machumbub.framework */; };
+		A34C9D341046A89AB0A1E0ED /* Pods_matchumbeop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62BB37B3BA998620C6BA6E1 /* Pods_matchumbeop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,14 +55,14 @@
 			containerPortal = 30467E092C6B862A007A0F19 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 30467E102C6B862A007A0F19;
-			remoteInfo = machumbub;
+			remoteInfo = matchumbeop;
 		};
 		30467E2D2C6B862B007A0F19 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 30467E092C6B862A007A0F19 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 30467E102C6B862A007A0F19;
-			remoteInfo = machumbub;
+			remoteInfo = matchumbeop;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -73,7 +73,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				30D5E0B12C74C17200295E53 /* Pods_machumbub.framework in Embed Frameworks */,
+				30D5E0B12C74C17200295E53 /* Pods_matchumbeop.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,7 +84,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				30D5E0B52C74C17C00295E53 /* Pods_machumbubTests.framework in Embed Frameworks */,
+				30D5E0B52C74C17C00295E53 /* Pods_matchumbeopTests.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +95,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				30D5E0B92C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework in Embed Frameworks */,
+				30D5E0B92C74C18200295E53 /* Pods_matchumbeop_matchumbeopUITests.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,9 +103,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0106906D3DDFC1784AF771D5 /* Pods-machumbub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbub.debug.xcconfig"; path = "Target Support Files/Pods-machumbub/Pods-machumbub.debug.xcconfig"; sourceTree = "<group>"; };
-		1894E3D37FC935BEA3EE42DF /* Pods-machumbub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbub.release.xcconfig"; path = "Target Support Files/Pods-machumbub/Pods-machumbub.release.xcconfig"; sourceTree = "<group>"; };
-		2CCD25DF7D6A01504574BF17 /* Pods_machumbub_machumbubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_machumbub_machumbubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0106906D3DDFC1784AF771D5 /* Pods-matchumbeop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matchumbeop.debug.xcconfig"; path = "Target Support Files/Pods-matchumbeop/Pods-matchumbeop.debug.xcconfig"; sourceTree = "<group>"; };
+		1894E3D37FC935BEA3EE42DF /* Pods-matchumbeop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matchumbeop.release.xcconfig"; path = "Target Support Files/Pods-matchumbeop/Pods-matchumbeop.release.xcconfig"; sourceTree = "<group>"; };
+		2CCD25DF7D6A01504574BF17 /* Pods_matchumbeop_matchumbeopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_matchumbeop_matchumbeopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		302B5FB12C7620530043351B /* AnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEngine.swift; sourceTree = "<group>"; };
 		302B5FB42C76208F0043351B /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		302B5FB62C7620CF0043351B /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
@@ -117,16 +117,16 @@
 		3042EB8A2C73810400F69690 /* HintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
 		3042EB8C2C7393BC00F69690 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		3042EB8E2C739E5100F69690 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		30467E112C6B862A007A0F19 /* machumbub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = machumbub.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		30467E142C6B862A007A0F19 /* machumbubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = machumbubApp.swift; sourceTree = "<group>"; };
-		30467E182C6B862B007A0F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = machumbub/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		30467E112C6B862A007A0F19 /* matchumbeop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = matchumbeop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30467E142C6B862A007A0F19 /* matchumbeopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matchumbeopApp.swift; sourceTree = "<group>"; };
+		30467E182C6B862B007A0F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = matchumbeop/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		30467E1B2C6B862B007A0F19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		30467E1D2C6B862B007A0F19 /* machumbub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = machumbub.entitlements; sourceTree = "<group>"; };
-		30467E222C6B862B007A0F19 /* machumbubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = machumbubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		30467E262C6B862B007A0F19 /* machumbubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = machumbubTests.swift; sourceTree = "<group>"; };
-		30467E2C2C6B862B007A0F19 /* machumbubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = machumbubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		30467E302C6B862B007A0F19 /* machumbubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = machumbubUITests.swift; sourceTree = "<group>"; };
-		30467E322C6B862B007A0F19 /* machumbubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = machumbubUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		30467E1D2C6B862B007A0F19 /* matchumbeop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = matchumbeop.entitlements; sourceTree = "<group>"; };
+		30467E222C6B862B007A0F19 /* matchumbeopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = matchumbeopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30467E262C6B862B007A0F19 /* matchumbeopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matchumbeopTests.swift; sourceTree = "<group>"; };
+		30467E2C2C6B862B007A0F19 /* matchumbeopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = matchumbeopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30467E302C6B862B007A0F19 /* matchumbeopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matchumbeopUITests.swift; sourceTree = "<group>"; };
+		30467E322C6B862B007A0F19 /* matchumbeopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matchumbeopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		30467E3F2C6B865B007A0F19 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		306064612C6B87BF00BC6350 /* NaverSpellChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverSpellChecker.swift; sourceTree = "<group>"; };
 		306064632C6B87D400BC6350 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -137,17 +137,17 @@
 		306064722C6C8AE400BC6350 /* SpellCheckerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckerExtension.swift; sourceTree = "<group>"; };
 		30D5E0A12C74458C00295E53 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		30D5E0A42C74BB4800295E53 /* SettingsDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDivider.swift; sourceTree = "<group>"; };
-		30D5E0A92C74C15700295E53 /* Pods_machumbub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_machumbub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		30D5E0B32C74C17C00295E53 /* Pods_machumbubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_machumbubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		30D5E0B72C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_machumbub_machumbubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30D5E0A92C74C15700295E53 /* Pods_matchumbeop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_matchumbeop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30D5E0B32C74C17C00295E53 /* Pods_matchumbeopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_matchumbeopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30D5E0B72C74C18200295E53 /* Pods_matchumbeop_matchumbeopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_matchumbeop_matchumbeopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D5E0BB2C74C3B800295E53 /* UpdateChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateChecker.swift; sourceTree = "<group>"; };
 		30D5E0C12C74D48B00295E53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4AD7A1A528B8859594BCF5B2 /* Pods-machumbubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbubTests.release.xcconfig"; path = "Target Support Files/Pods-machumbubTests/Pods-machumbubTests.release.xcconfig"; sourceTree = "<group>"; };
-		898C33C88652E63BFBED0FB4 /* Pods-machumbub-machumbubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbub-machumbubUITests.release.xcconfig"; path = "Target Support Files/Pods-machumbub-machumbubUITests/Pods-machumbub-machumbubUITests.release.xcconfig"; sourceTree = "<group>"; };
-		89DFA2DE2EEE8DE8FFEE7A0F /* Pods-machumbubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbubTests.debug.xcconfig"; path = "Target Support Files/Pods-machumbubTests/Pods-machumbubTests.debug.xcconfig"; sourceTree = "<group>"; };
-		90CD5A3CE3B7DF0B32838938 /* Pods_machumbubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_machumbubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B62BB37B3BA998620C6BA6E1 /* Pods_machumbub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_machumbub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C599C0E4C29875A660072236 /* Pods-machumbub-machumbubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-machumbub-machumbubUITests.debug.xcconfig"; path = "Target Support Files/Pods-machumbub-machumbubUITests/Pods-machumbub-machumbubUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4AD7A1A528B8859594BCF5B2 /* Pods-matchumbeopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matchumbeopTests.release.xcconfig"; path = "Target Support Files/Pods-matchumbeopTests/Pods-matchumbeopTests.release.xcconfig"; sourceTree = "<group>"; };
+		898C33C88652E63BFBED0FB4 /* Pods-matchumbeop-matchumbeopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matchumbeop-matchumbeopUITests.release.xcconfig"; path = "Target Support Files/Pods-matchumbeop-matchumbeopUITests/Pods-matchumbeop-matchumbeopUITests.release.xcconfig"; sourceTree = "<group>"; };
+		89DFA2DE2EEE8DE8FFEE7A0F /* Pods-matchumbeopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matchumbeopTests.debug.xcconfig"; path = "Target Support Files/Pods-matchumbeopTests/Pods-matchumbeopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		90CD5A3CE3B7DF0B32838938 /* Pods_matchumbeopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_matchumbeopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62BB37B3BA998620C6BA6E1 /* Pods_matchumbeop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_matchumbeop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C599C0E4C29875A660072236 /* Pods-matchumbeop-matchumbeopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matchumbeop-matchumbeopUITests.debug.xcconfig"; path = "Target Support Files/Pods-matchumbeop-matchumbeopUITests/Pods-matchumbeop-matchumbeopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,11 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				30A0D8D92C775C1400F56515 /* Defaults in Frameworks */,
-				30D5E0B02C74C17200295E53 /* Pods_machumbub.framework in Frameworks */,
+				30D5E0B02C74C17200295E53 /* Pods_matchumbeop.framework in Frameworks */,
 				30D5E0A02C73A5D700295E53 /* LaunchAtLogin in Frameworks */,
 				30D5E0A82C74BD5C00295E53 /* Sparkle in Frameworks */,
 				306064672C6B8A7C00BC6350 /* KeyboardShortcuts in Frameworks */,
-				A34C9D341046A89AB0A1E0ED /* Pods_machumbub.framework in Frameworks */,
+				A34C9D341046A89AB0A1E0ED /* Pods_matchumbeop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D5E0B42C74C17C00295E53 /* Pods_machumbubTests.framework in Frameworks */,
+				30D5E0B42C74C17C00295E53 /* Pods_matchumbeopTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D5E0B82C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework in Frameworks */,
+				30D5E0B82C74C18200295E53 /* Pods_matchumbeop_matchumbeopUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,9 +225,9 @@
 				3042EB8C2C7393BC00F69690 /* ToastView.swift */,
 				306064682C6B8C5800BC6350 /* Info.plist */,
 				30410C092C74EC1300AF9126 /* AppIcon.icns */,
-				30467E132C6B862A007A0F19 /* machumbub */,
-				30467E252C6B862B007A0F19 /* machumbubTests */,
-				30467E2F2C6B862B007A0F19 /* machumbubUITests */,
+				30467E132C6B862A007A0F19 /* matchumbeop */,
+				30467E252C6B862B007A0F19 /* matchumbeopTests */,
+				30467E2F2C6B862B007A0F19 /* matchumbeopUITests */,
 				30467E122C6B862A007A0F19 /* Products */,
 				FB1A3C1335099160E11D5249 /* Pods */,
 				91FFB42A341B269B3C91CFD7 /* Frameworks */,
@@ -237,14 +237,14 @@
 		30467E122C6B862A007A0F19 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				30467E112C6B862A007A0F19 /* machumbub.app */,
-				30467E222C6B862B007A0F19 /* machumbubTests.xctest */,
-				30467E2C2C6B862B007A0F19 /* machumbubUITests.xctest */,
+				30467E112C6B862A007A0F19 /* matchumbeop.app */,
+				30467E222C6B862B007A0F19 /* matchumbeopTests.xctest */,
+				30467E2C2C6B862B007A0F19 /* matchumbeopUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		30467E132C6B862A007A0F19 /* machumbub */ = {
+		30467E132C6B862A007A0F19 /* matchumbeop */ = {
 			isa = PBXGroup;
 			children = (
 				302B5FBE2C7756B20043351B /* SpellCheckers */,
@@ -253,9 +253,9 @@
 				30D5E0C12C74D48B00295E53 /* GoogleService-Info.plist */,
 				30D5E0BD2C74C3E800295E53 /* UpdateChecker */,
 				30D5E0A32C74BB2F00295E53 /* SharedUIComponents */,
-				30467E142C6B862A007A0F19 /* machumbubApp.swift */,
+				30467E142C6B862A007A0F19 /* matchumbeopApp.swift */,
 				30467E182C6B862B007A0F19 /* Assets.xcassets */,
-				30467E1D2C6B862B007A0F19 /* machumbub.entitlements */,
+				30467E1D2C6B862B007A0F19 /* matchumbeop.entitlements */,
 				30467E1A2C6B862B007A0F19 /* Preview Content */,
 				30467E3F2C6B865B007A0F19 /* ContentView.swift */,
 				306064632C6B87D400BC6350 /* SettingsView.swift */,
@@ -266,7 +266,7 @@
 				30D5E0A12C74458C00295E53 /* Utils.swift */,
 				302B5FC22C7758690043351B /* Defaults.swift */,
 			);
-			path = machumbub;
+			path = matchumbeop;
 			sourceTree = "<group>";
 		};
 		30467E1A2C6B862B007A0F19 /* Preview Content */ = {
@@ -277,21 +277,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		30467E252C6B862B007A0F19 /* machumbubTests */ = {
+		30467E252C6B862B007A0F19 /* matchumbeopTests */ = {
 			isa = PBXGroup;
 			children = (
-				30467E262C6B862B007A0F19 /* machumbubTests.swift */,
+				30467E262C6B862B007A0F19 /* matchumbeopTests.swift */,
 			);
-			path = machumbubTests;
+			path = matchumbeopTests;
 			sourceTree = "<group>";
 		};
-		30467E2F2C6B862B007A0F19 /* machumbubUITests */ = {
+		30467E2F2C6B862B007A0F19 /* matchumbeopUITests */ = {
 			isa = PBXGroup;
 			children = (
-				30467E302C6B862B007A0F19 /* machumbubUITests.swift */,
-				30467E322C6B862B007A0F19 /* machumbubUITestsLaunchTests.swift */,
+				30467E302C6B862B007A0F19 /* matchumbeopUITests.swift */,
+				30467E322C6B862B007A0F19 /* matchumbeopUITestsLaunchTests.swift */,
 			);
-			path = machumbubUITests;
+			path = matchumbeopUITests;
 			sourceTree = "<group>";
 		};
 		30D5E0A32C74BB2F00295E53 /* SharedUIComponents */ = {
@@ -315,12 +315,12 @@
 		91FFB42A341B269B3C91CFD7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				30D5E0B72C74C18200295E53 /* Pods_machumbub_machumbubUITests.framework */,
-				30D5E0B32C74C17C00295E53 /* Pods_machumbubTests.framework */,
-				30D5E0A92C74C15700295E53 /* Pods_machumbub.framework */,
-				2CCD25DF7D6A01504574BF17 /* Pods_machumbub_machumbubUITests.framework */,
-				90CD5A3CE3B7DF0B32838938 /* Pods_machumbubTests.framework */,
-				B62BB37B3BA998620C6BA6E1 /* Pods_machumbub.framework */,
+				30D5E0B72C74C18200295E53 /* Pods_matchumbeop_matchumbeopUITests.framework */,
+				30D5E0B32C74C17C00295E53 /* Pods_matchumbeopTests.framework */,
+				30D5E0A92C74C15700295E53 /* Pods_matchumbeop.framework */,
+				2CCD25DF7D6A01504574BF17 /* Pods_matchumbeop_matchumbeopUITests.framework */,
+				90CD5A3CE3B7DF0B32838938 /* Pods_matchumbeopTests.framework */,
+				B62BB37B3BA998620C6BA6E1 /* Pods_matchumbeop.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -328,12 +328,12 @@
 		FB1A3C1335099160E11D5249 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0106906D3DDFC1784AF771D5 /* Pods-machumbub.debug.xcconfig */,
-				1894E3D37FC935BEA3EE42DF /* Pods-machumbub.release.xcconfig */,
-				C599C0E4C29875A660072236 /* Pods-machumbub-machumbubUITests.debug.xcconfig */,
-				898C33C88652E63BFBED0FB4 /* Pods-machumbub-machumbubUITests.release.xcconfig */,
-				89DFA2DE2EEE8DE8FFEE7A0F /* Pods-machumbubTests.debug.xcconfig */,
-				4AD7A1A528B8859594BCF5B2 /* Pods-machumbubTests.release.xcconfig */,
+				0106906D3DDFC1784AF771D5 /* Pods-matchumbeop.debug.xcconfig */,
+				1894E3D37FC935BEA3EE42DF /* Pods-matchumbeop.release.xcconfig */,
+				C599C0E4C29875A660072236 /* Pods-matchumbeop-matchumbeopUITests.debug.xcconfig */,
+				898C33C88652E63BFBED0FB4 /* Pods-matchumbeop-matchumbeopUITests.release.xcconfig */,
+				89DFA2DE2EEE8DE8FFEE7A0F /* Pods-matchumbeopTests.debug.xcconfig */,
+				4AD7A1A528B8859594BCF5B2 /* Pods-matchumbeopTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -341,9 +341,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		30467E102C6B862A007A0F19 /* machumbub */ = {
+		30467E102C6B862A007A0F19 /* matchumbeop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30467E362C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "machumbub" */;
+			buildConfigurationList = 30467E362C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "matchumbeop" */;
 			buildPhases = (
 				00F88498609780D34240066B /* [CP] Check Pods Manifest.lock */,
 				30467E0D2C6B862A007A0F19 /* Sources */,
@@ -357,20 +357,20 @@
 			);
 			dependencies = (
 			);
-			name = machumbub;
+			name = matchumbeop;
 			packageProductDependencies = (
 				306064662C6B8A7C00BC6350 /* KeyboardShortcuts */,
 				30D5E09F2C73A5D700295E53 /* LaunchAtLogin */,
 				30D5E0A72C74BD5C00295E53 /* Sparkle */,
 				30A0D8D82C775C1400F56515 /* Defaults */,
 			);
-			productName = machumbub;
-			productReference = 30467E112C6B862A007A0F19 /* machumbub.app */;
+			productName = matchumbeop;
+			productReference = 30467E112C6B862A007A0F19 /* matchumbeop.app */;
 			productType = "com.apple.product-type.application";
 		};
-		30467E212C6B862B007A0F19 /* machumbubTests */ = {
+		30467E212C6B862B007A0F19 /* matchumbeopTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30467E392C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "machumbubTests" */;
+			buildConfigurationList = 30467E392C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "matchumbeopTests" */;
 			buildPhases = (
 				B0BCCCA0AA4321A0458A0A78 /* [CP] Check Pods Manifest.lock */,
 				30467E1E2C6B862B007A0F19 /* Sources */,
@@ -383,14 +383,14 @@
 			dependencies = (
 				30467E242C6B862B007A0F19 /* PBXTargetDependency */,
 			);
-			name = machumbubTests;
-			productName = machumbubTests;
-			productReference = 30467E222C6B862B007A0F19 /* machumbubTests.xctest */;
+			name = matchumbeopTests;
+			productName = matchumbeopTests;
+			productReference = 30467E222C6B862B007A0F19 /* matchumbeopTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		30467E2B2C6B862B007A0F19 /* machumbubUITests */ = {
+		30467E2B2C6B862B007A0F19 /* matchumbeopUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30467E3C2C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "machumbubUITests" */;
+			buildConfigurationList = 30467E3C2C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "matchumbeopUITests" */;
 			buildPhases = (
 				610BB47D42B04F06936D4BCF /* [CP] Check Pods Manifest.lock */,
 				30467E282C6B862B007A0F19 /* Sources */,
@@ -404,9 +404,9 @@
 			dependencies = (
 				30467E2E2C6B862B007A0F19 /* PBXTargetDependency */,
 			);
-			name = machumbubUITests;
-			productName = machumbubUITests;
-			productReference = 30467E2C2C6B862B007A0F19 /* machumbubUITests.xctest */;
+			name = matchumbeopUITests;
+			productName = matchumbeopUITests;
+			productReference = 30467E2C2C6B862B007A0F19 /* matchumbeopUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -432,7 +432,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 30467E0C2C6B862A007A0F19 /* Build configuration list for PBXProject "machumbub" */;
+			buildConfigurationList = 30467E0C2C6B862A007A0F19 /* Build configuration list for PBXProject "matchumbeop" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -452,9 +452,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				30467E102C6B862A007A0F19 /* machumbub */,
-				30467E212C6B862B007A0F19 /* machumbubTests */,
-				30467E2B2C6B862B007A0F19 /* machumbubUITests */,
+				30467E102C6B862A007A0F19 /* matchumbeop */,
+				30467E212C6B862B007A0F19 /* matchumbeopTests */,
+				30467E2B2C6B862B007A0F19 /* matchumbeopUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -504,7 +504,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-machumbub-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-matchumbeop-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -540,15 +540,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-machumbub-machumbubUITests/Pods-machumbub-machumbubUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-matchumbeop-matchumbeopUITests/Pods-matchumbeop-matchumbeopUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-machumbub-machumbubUITests/Pods-machumbub-machumbubUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-matchumbeop-matchumbeopUITests/Pods-matchumbeop-matchumbeopUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-machumbub-machumbubUITests/Pods-machumbub-machumbubUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-matchumbeop-matchumbeopUITests/Pods-matchumbeop-matchumbeopUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5E0F08EAA1159DD279F1A4D9 /* [CP] Embed Pods Frameworks */ = {
@@ -557,15 +557,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-machumbub/Pods-machumbub-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-matchumbeop/Pods-matchumbeop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-machumbub/Pods-machumbub-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-matchumbeop/Pods-matchumbeop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-machumbub/Pods-machumbub-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-matchumbeop/Pods-matchumbeop-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		610BB47D42B04F06936D4BCF /* [CP] Check Pods Manifest.lock */ = {
@@ -583,7 +583,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-machumbub-machumbubUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-matchumbeop-matchumbeopUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -605,7 +605,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-machumbubTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-matchumbeopTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -636,7 +636,7 @@
 				3042EB8F2C739E5100F69690 /* Constants.swift in Sources */,
 				302B5FC32C7758690043351B /* Defaults.swift in Sources */,
 				302B5FBD2C7622170043351B /* AnalyticsEvents.swift in Sources */,
-				30467E152C6B862A007A0F19 /* machumbubApp.swift in Sources */,
+				30467E152C6B862A007A0F19 /* matchumbeopApp.swift in Sources */,
 				306064712C6BB82D00BC6350 /* DraggableTextView.swift in Sources */,
 				30D5E0A22C74458C00295E53 /* Utils.swift in Sources */,
 				30D5E0A52C74BB4800295E53 /* SettingsDivider.swift in Sources */,
@@ -647,7 +647,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30467E272C6B862B007A0F19 /* machumbubTests.swift in Sources */,
+				30467E272C6B862B007A0F19 /* matchumbeopTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,8 +655,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30467E332C6B862B007A0F19 /* machumbubUITestsLaunchTests.swift in Sources */,
-				30467E312C6B862B007A0F19 /* machumbubUITests.swift in Sources */,
+				30467E332C6B862B007A0F19 /* matchumbeopUITestsLaunchTests.swift in Sources */,
+				30467E312C6B862B007A0F19 /* matchumbeopUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,12 +665,12 @@
 /* Begin PBXTargetDependency section */
 		30467E242C6B862B007A0F19 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 30467E102C6B862A007A0F19 /* machumbub */;
+			target = 30467E102C6B862A007A0F19 /* matchumbeop */;
 			targetProxy = 30467E232C6B862B007A0F19 /* PBXContainerItemProxy */;
 		};
 		30467E2E2C6B862B007A0F19 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 30467E102C6B862A007A0F19 /* machumbub */;
+			target = 30467E102C6B862A007A0F19 /* matchumbeop */;
 			targetProxy = 30467E2D2C6B862B007A0F19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -796,24 +796,24 @@
 		};
 		30467E372C6B862B007A0F19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0106906D3DDFC1784AF771D5 /* Pods-machumbub.debug.xcconfig */;
+			baseConfigurationReference = 0106906D3DDFC1784AF771D5 /* Pods-matchumbeop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = machumbub/machumbub.entitlements;
+				CODE_SIGN_ENTITLEMENTS = matchumbeop/matchumbeop.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "machumbub/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "matchumbeop/Preview\\ Content";
 				DEVELOPMENT_TEAM = N7V29V6Q33;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Machumbub;
+				INFOPLIST_KEY_CFBundleDisplayName = Matchumbeop;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSAppleEventsUsageDescription = "키보드 단축키를 사용하여 다른 앱에 선택된 텍스트를 자동으로 복사하기 위해 권한이 필요합니다.";
@@ -833,7 +833,7 @@
 					"-framework",
 					"\"SwiftSoup\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.machumbub;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.matchumbeop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -843,24 +843,24 @@
 		};
 		30467E382C6B862B007A0F19 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1894E3D37FC935BEA3EE42DF /* Pods-machumbub.release.xcconfig */;
+			baseConfigurationReference = 1894E3D37FC935BEA3EE42DF /* Pods-matchumbeop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = machumbub/machumbub.entitlements;
+				CODE_SIGN_ENTITLEMENTS = matchumbeop/matchumbeop.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "machumbub/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "matchumbeop/Preview\\ Content";
 				DEVELOPMENT_TEAM = N7V29V6Q33;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Machumbub;
+				INFOPLIST_KEY_CFBundleDisplayName = Matchumbeop;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSAppleEventsUsageDescription = "키보드 단축키를 사용하여 다른 앱에 선택된 텍스트를 자동으로 복사하기 위해 권한이 필요합니다.";
@@ -880,7 +880,7 @@
 					"-framework",
 					"\"SwiftSoup\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.machumbub;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.matchumbeop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -890,7 +890,7 @@
 		};
 		30467E3A2C6B862B007A0F19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89DFA2DE2EEE8DE8FFEE7A0F /* Pods-machumbubTests.debug.xcconfig */;
+			baseConfigurationReference = 89DFA2DE2EEE8DE8FFEE7A0F /* Pods-matchumbeopTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -899,17 +899,17 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.machumbubTests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.matchumbeopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/machumbub.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/machumbub";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/matchumbeop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/matchumbeop";
 			};
 			name = Debug;
 		};
 		30467E3B2C6B862B007A0F19 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AD7A1A528B8859594BCF5B2 /* Pods-machumbubTests.release.xcconfig */;
+			baseConfigurationReference = 4AD7A1A528B8859594BCF5B2 /* Pods-matchumbeopTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -918,52 +918,52 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.machumbubTests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.matchumbeopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/machumbub.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/machumbub";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/matchumbeop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/matchumbeop";
 			};
 			name = Release;
 		};
 		30467E3D2C6B862B007A0F19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C599C0E4C29875A660072236 /* Pods-machumbub-machumbubUITests.debug.xcconfig */;
+			baseConfigurationReference = C599C0E4C29875A660072236 /* Pods-matchumbeop-matchumbeopUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2V5P3KZ3LS;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.machumbubUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.matchumbeopUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = machumbub;
+				TEST_TARGET_NAME = matchumbeop;
 			};
 			name = Debug;
 		};
 		30467E3E2C6B862B007A0F19 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 898C33C88652E63BFBED0FB4 /* Pods-machumbub-machumbubUITests.release.xcconfig */;
+			baseConfigurationReference = 898C33C88652E63BFBED0FB4 /* Pods-matchumbeop-matchumbeopUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2V5P3KZ3LS;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.machumbubUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ssut.matchumbeopUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = machumbub;
+				TEST_TARGET_NAME = matchumbeop;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		30467E0C2C6B862A007A0F19 /* Build configuration list for PBXProject "machumbub" */ = {
+		30467E0C2C6B862A007A0F19 /* Build configuration list for PBXProject "matchumbeop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30467E342C6B862B007A0F19 /* Debug */,
@@ -972,7 +972,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30467E362C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "machumbub" */ = {
+		30467E362C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "matchumbeop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30467E372C6B862B007A0F19 /* Debug */,
@@ -981,7 +981,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30467E392C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "machumbubTests" */ = {
+		30467E392C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "matchumbeopTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30467E3A2C6B862B007A0F19 /* Debug */,
@@ -990,7 +990,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30467E3C2C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "machumbubUITests" */ = {
+		30467E3C2C6B862B007A0F19 /* Build configuration list for PBXNativeTarget "matchumbeopUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30467E3D2C6B862B007A0F19 /* Debug */,

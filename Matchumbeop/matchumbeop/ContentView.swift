@@ -6,19 +6,19 @@ import Defaults
 
 struct ContentView: View {
      @StateObject var appState = AppState.shared
-     
+
      @State private var textLimit = 1800 // hard-limit (TODO: 풀기?)
      @State private var isSettingsButtonHovered = false
-     
+
      @FocusState private var isTextEditorFocused: Bool
-     
+
      @State private var lastSubmittedText: String = ""
      @State private var lastUsedEngine: SpellCheckerEngine = .naver
-     
+
      @Default(.spellCheckerEngine) var spellCheckerEngine: SpellCheckerEngine
-     
-     private let analytics: Analytics = MachumbubAnalytics.shared
-     
+
+     private let analytics: Analytics = MatchumbeopAnalytics.shared
+
      var body: some View {
           VStack(spacing: 10) {
                TextEditor(text: $appState.text)
@@ -76,7 +76,7 @@ struct ContentView: View {
                                         appState.text = String(appState.text.prefix(textLimit))
                                    }
                               }
-                         
+
                          Button(action: submitText) {
                               EmptyView()
                          }
@@ -89,7 +89,7 @@ struct ContentView: View {
                               isTextEditorFocused = true
                          }
                     }
-               
+
                if appState.isLoading {
                     ProgressView()
                          .padding(.vertical, 10)
@@ -104,7 +104,7 @@ struct ContentView: View {
                               .padding(.horizontal, 4)
                               .padding(.vertical, 2)
                               .background(Color(NSColor.windowBackgroundColor))
-                         
+
                          HStack {
                               HintView()
                                    .padding(.leading, 4)
@@ -113,12 +113,12 @@ struct ContentView: View {
                                    NSPasteboard.general.clearContents()
                                    let plainText = String(result.characters)
                                    NSPasteboard.general.setString(plainText, forType: .string)
-                                   
+
                                    appState.showToast = true
                                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                                         appState.showToast = false
                                    }
-                                   
+
                                    self.analytics.send(.textCopied)
                               }) {
                                    Text("복사")
@@ -148,19 +148,19 @@ struct ContentView: View {
                     .animation(.easeInOut(duration: 0.3), value: appState.showToast)
           )
      }
-     
+
      private func calculateHeight() -> CGFloat {
           let resultHeight = appState.result != nil ? 300 : 0
           return CGFloat(225 + resultHeight)
      }
-     
+
      private func submitText() {
          if !appState.isLoading &&
             (appState.text != lastSubmittedText || spellCheckerEngine != lastUsedEngine) {
              Task {
                  await self.appState.checkSpelling(text: appState.text)
                  self.analytics.send(.spellChecked(method: .inApp, length: appState.text.count))
-                 
+
                  lastSubmittedText = appState.text
                  lastUsedEngine = spellCheckerEngine
              }

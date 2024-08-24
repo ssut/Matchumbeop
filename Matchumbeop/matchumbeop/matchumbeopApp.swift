@@ -11,7 +11,7 @@ class TheUpdateCheckerDelegate: UpdateCheckerDelegate {
 let updateCheckerDelegate = TheUpdateCheckerDelegate()
 
 @main
-struct machumbubApp: App {
+struct matchumbeopApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
