@@ -1,9 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
-   <channel>
-      <title>Matchumbeop - 한글 맞춤법 검사기</title>
-      <link>https://ssut.github.io/matchumbeop/Support/appcast.xml</link>
-      <description>Most recent changes with links to updates.</description>
-      <language>ko</language>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+    <channel>
+        <title>Matchumbeop - 한글 맞춤법 검사기</title>
+        <link>https://ssut.github.io/matchumbeop/Support/appcast.xml</link>
+        <description>Most recent changes with links to updates.</description>
+        <language>ko</language>
+        <item>
+            <title>1.0</title>
+            <pubDate>Sat, 24 Aug 2024 04:43:31 +0000</pubDate>
+            <link>https://github.com/ssut/Matchumbeop/releases</link>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h1>첫 릴리즈</h1>
+<ul>
+<li>첫 릴리즈</li>
+</ul>]]></description>
+            <enclosure url="https://github.com/ssut/Matchumbeop/releases/download/v1.0/matchumbeop.zip" length="7535713" type="application/octet-stream"/>
+        </item>
     </channel>
- </rss>
+</rss>
