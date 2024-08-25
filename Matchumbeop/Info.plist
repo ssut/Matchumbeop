@@ -13,7 +13,7 @@
 				<string>Check Spelling with Matchumbeop</string>
 			</dict>
 			<key>NSMessage</key>
-			<string>matchumbeopServiceRequest:</string>
+			<string>handleServiceRequest:</string>
 			<key>NSPortName</key>
 			<string>MatchumbeopService</string>
 			<key>NSReturnTypes</key>
