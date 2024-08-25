@@ -15,7 +15,7 @@ jobs:
   preparation:
     name: Preparation job
     if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, '/release') && github.event.comment.user.login == github.repository_owner }}
-    runs-on: ubuntu-24.04
+    runs-on: macos-14
     permissions:
       contents: write
       pull-requests: write
@@ -25,6 +25,7 @@ jobs:
         with:
           comment-id: ${{ github.event.comment.id }}
           reactions: eyes
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/github-script@v6 # check if the PR is ready to be merged
         with:
           result-encoding: string
@@ -365,9 +366,11 @@ jobs:
         with:
           comment-id: ${{ github.event.comment.id }}
           reactions: rocket
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Add negative reaction
         if: ${{ contains(join(needs.*.result, ','), 'failure') }}
         uses: peter-evans/create-or-update-comment@v2
         with:
           comment-id: ${{ github.event.comment.id }}
           reactions: confused
+          token: ${{ secrets.GITHUB_TOKEN }}
