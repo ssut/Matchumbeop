@@ -1,11 +1,13 @@
 name: "Create Release"
 on:
+  push:
+    branches:
+      - "release/**"
   pull_request:
     branches:
       - "release/**"
     types:
       - ready_for_review
-      - synchronize
       - opened
   workflow_dispatch:
 
