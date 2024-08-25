@@ -1,31 +1,48 @@
 name: "Create Release"
 on:
-  push:
-    branches:
-      - "release/**"
-  pull_request:
-    branches:
-      - "release/**"
+  issue_comment:
+    types: [created]
 
 concurrency:
   group: publish-release
   cancel-in-progress: true
 
 env:
-  projname: matchumbeop
+  projname: Matchumbeop
   beta-channel-name: "beta"
 
 jobs:
   preparation:
     name: Preparation job
+    if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, '/release') && github.event.comment.user.login == github.repository_owner }}
     runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
-      # - name: Add reactions # adding reactions to the comment to show that the action is running
-      #   uses: peter-evans/create-or-update-comment@v2
-      #   with:
-      #     comment-id: ${{ github.event.comment.id }}
-      #     reactions: eyes
+      - name: Add reactions # adding reactions to the comment to show that the action is running
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          comment-id: ${{ github.event.comment.id }}
+          reactions: eyes
+      - uses: actions/github-script@v6 # check if the PR is ready to be merged
+        with:
+          result-encoding: string
+          script: |
+            const pr = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
+            if (pr.data.draft || pr.data.mergeable_state !== "clean") {
+              core.setFailed("PR is not ready to be merged");
+            }
+      - uses: xt0rted/pull-request-comment-branch@v1 # check out branch of PR
+        id: comment-branch
       - uses: actions/checkout@v4
+        if: success()
+        with:
+          ref: ${{ steps.comment-branch.outputs.head_ref }}
       - name: Extract latest changes # generate release notes, version and title to use in the release
         id: latest_changes
         run: |
@@ -54,12 +71,22 @@ jobs:
           rm latest_changes
           rm title
           rm new_version
+      - name: Sync branch
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: ${{ steps.comment-branch.outputs.base_ref }}
+          target_branch: ${{ steps.comment-branch.outputs.head_ref }}
+          github_token: ${{ github.token }}
 
   archive:
     name: Build and export app
     runs-on: macos-14
     needs: preparation
     environment: production
+    permissions:
+      contents: read
+      pull-requests: read
     steps:
       - uses: actions/download-artifact@master # download all previously generated artifacts
         with:
@@ -69,7 +96,12 @@ jobs:
         run: |
           echo "new_version=$(cat artifacts/artifact/new_version)" >> $GITHUB_OUTPUT
           echo "title=$(cat artifacts/artifact/title)" >> $GITHUB_OUTPUT
-      - uses: actions/checkout@v4
+      - uses: xt0rted/pull-request-comment-branch@v1 # check out branch of PR
+        id: comment-branch
+      - uses: actions/checkout@v3
+        if: success()
+        with:
+          ref: ${{ steps.comment-branch.outputs.head_ref }}
       - uses: irgaly/xcode-cache@v1
         with:
           key: xcode-cache-deriveddata-${{ github.workflow }}-${{ github.sha }}
@@ -156,13 +188,18 @@ jobs:
     runs-on: macos-14
     environment: production
     needs: archive
-    if: contains(github.ref, '-beta')
+    if: ${{ contains(github.event.comment.body, 'beta') }}
     permissions:
       contents: write
       packages: write
       actions: write
     steps:
+      - uses: xt0rted/pull-request-comment-branch@v1 # check out branch of PR
+        id: comment-branch
       - uses: actions/checkout@v4
+        if: success()
+        with:
+          ref: ${{ steps.comment-branch.outputs.head_ref }}
       - uses: actions/download-artifact@master # download all previously generated artifacts
         with:
           path: artifacts
@@ -234,13 +271,18 @@ jobs:
     runs-on: macos-14
     environment: production
     needs: archive
-    if: ${{ !contains(github.ref, '-beta') }}
+    if: ${{ !contains(github.event.comment.body, 'beta') }}
     permissions:
       contents: write
       packages: write
       actions: write
     steps:
+      - uses: xt0rted/pull-request-comment-branch@v1 # check out branch of PR
+        id: comment-branch
       - uses: actions/checkout@v4
+        if: success()
+        with:
+          ref: ${{ steps.comment-branch.outputs.head_ref }}
       - uses: actions/download-artifact@master # download all previously generated artifacts
         with:
           path: artifacts
@@ -299,30 +341,33 @@ jobs:
   ending:
     name: Ending job
     if: always()
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: [pre-release, release]
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
-      # - uses: actions/checkout@v4 # checkout again, because the previous checkout is detached
-      # - name: Merge PR # merge PR
-      #   uses: devmasx/merge-branch@v1
-      #   with:
-      #     type: now
-      #     from_branch: ${{ steps.comment-branch.outputs.head_ref }}
-      #     target_branch: ${{ steps.comment-branch.outputs.base_ref }}
-      #     github_token: ${{ github.token }}
-      #     message: "chore(release): Update version to ${{ steps.info.outputs.new_version }}"
+      - uses: actions/checkout@v4 # checkout again, because the previous checkout is detached
+      - name: Merge PR # merge PR
+        uses: devmasx/merge-branch@v1
+        with:
+          type: now
+          from_branch: ${{ steps.comment-branch.outputs.head_ref }}
+          target_branch: ${{ steps.comment-branch.outputs.base_ref }}
+          github_token: ${{ github.token }}
+          message: "chore(release): Update version to ${{ steps.info.outputs.new_version }}"
       - uses: geekyeggo/delete-artifact@v2
         with:
           name: "*"
-      # - name: Add success reactions # Adding reactions to comment depending on result
-      #   if: ${{ contains(join(needs.*.result, ','), 'success') }}
-      #   uses: peter-evans/create-or-update-comment@v2
-      #   with:
-      #     comment-id: ${{ github.event.comment.id }}
-      #     reactions: rocket
-      # - name: Add negative reaction
-      #   if: ${{ contains(join(needs.*.result, ','), 'failure') }}
-      #   uses: peter-evans/create-or-update-comment@v2
-      #   with:
-      #     comment-id: ${{ github.event.comment.id }}
-      #     reactions: confused
+      - name: Add success reactions # Adding reactions to comment depending on result
+        if: ${{ contains(join(needs.*.result, ','), 'success') }}
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          comment-id: ${{ github.event.comment.id }}
+          reactions: rocket
+      - name: Add negative reaction
+        if: ${{ contains(join(needs.*.result, ','), 'failure') }}
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          comment-id: ${{ github.event.comment.id }}
+          reactions: confused
