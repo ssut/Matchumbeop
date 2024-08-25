@@ -5,12 +5,17 @@ on:
       - "release/**"
     types:
       - ready_for_review
+      - synchronize
       - opened
   workflow_dispatch:
 
 concurrency:
   group: publish-release
   cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: read
 
 env:
   projname: Matchumbeop
