@@ -5,6 +5,7 @@ on:
     types:
       - ready_for_review
       - opened
+  workflow_dispatch:
 
 concurrency:
   group: publish-release
