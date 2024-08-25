@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko" class="bg-white dark:bg-zinc-900">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matchumbeop - macOS용 한글 맞춤법 검사기</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "IBM Plex Sans KR", sans-serif;
+      }
+
+      :root {
+        --background: 0 0% 98%;
+        --highlight-color: #444;
+      }
+
+      .title > span:not(:last-child)::after {
+        content: "✔";
+        color: #dc143c;
+        font-size: 0.4em;
+        vertical-align: super;
+        position: relative;
+        top: -0.5em;
+        user-select: none;
+        pointer-events: none;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body class="text-zinc-700 dark:text-zinc-50 min-h-screen flex flex-col overflow-x-hidden">
+    <header class="shrink-0 py-4 bg-zinc-200 dark:bg-zinc-800">
+      <div class="container mx-auto flex sm:items-center px-4">
+        <a href="/" class="-ml-2 flex gap-3 sm:items-center px-4 py-3 text-lg shrink-0 flex-col sm:flex-row">
+          <span>
+            <img
+              src="https://raw.githubusercontent.com/ssut/machumbub/main/icon.png"
+              alt="앱 아이콘"
+              width="60"
+              height="60"
+            />
+          </span>
+          <div class="pl-3 sm:pl-0">
+            <span class="font-bold text-zinc-600 dark:text-zinc-300">Matchumbeop</span>
+          </div>
+        </a>
+        <a href="https://www.buymeacoffee.com/suhunhan95" target="_blank" class="ml-auto block pr-4 pt-6 sm:pt-0"
+          ><img
+            src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+            alt="Buy Me A Coffee"
+            style="height: 42px !important; width: 152px !important"
+        /></a>
+      </div>
+    </header>
+
+    <main class="grow flex items-center bg-gradient-to-b from-zinc-200 to-white dark:from-zinc-800 dark:to-zinc-900">
+      <div class="container mx-auto px-4 py-4 lg:py-16 flex flex-col lg:flex-row gap-8 lg:items-center">
+        <div class="lg:w-6/12 lg:order-2">
+          <img
+            src="https://github.com/user-attachments/assets/d543dfc5-c6a2-43e8-80ff-23a60329e37c"
+            class="rounded-lg w-full"
+            alt="앱 스크린샷"
+          />
+        </div>
+        <div class="lg:w-6/12 lg:order-1">
+          <h1 class="title text-4xl sm:text-6xl font-bold text-zinc-600 dark:text-zinc-300 mb-4">
+            <span>Mat</span><span>chum</span><span>beop</span>
+          </h1>
+
+          <div class="text-zinc-800 dark:text-zinc-50 text-3xl sm:text-5xl font-semibold">
+            macOS용 한글 맞춤법 검사기
+          </div>
+          <div class="mt-5 text-zinc-600 dark:text-zinc-300 text-xl md:text-2xl">
+            macOS용 네이티브 한글 맞춤법 검사기, <strike class="text-zinc-400 dark:text-zinc-500">외없데?</strike> 여기
+            있어요!
+          </div>
+          <div class="mt-12 flex flex-wrap gap-5 items-center">
+            <a
+              href="https://github.com/ssut/Matchumbeop/releases"
+              class="w-full sm:w-auto text-xl text-center font-semibold select-none text-white px-5 py-3 rounded-md shadow-md dark:shadow-none bg-zinc-600 shadow-zinc-500/25 transition-all hover:bg-zinc-500 active:bg-zinc-700 active:shadow-sm flex items-center justify-center"
+            >
+              <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g id="Complete">
+                  <g id="download">
+                    <g>
+                      <path
+                        d="M3,12.3v7a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2v-7"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <g>
+                        <polyline
+                          data-name="Right"
+                          fill="none"
+                          id="Right-2"
+                          points="7.9 12.3 12 16.3 16.1 12.3"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <line
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          x1="12"
+                          x2="12"
+                          y1="2.7"
+                          y2="14.2"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              다운로드
+            </a>
+            <a
+              href="https://github.com/ssut/Matchumbeop"
+              class="w-full sm:w-auto text-xl text-center px-5 py-3 text-zinc-600 hover:text-zinc-500 active:text-zinc-700 dark:text-zinc-300 dark:hover:text-zinc-200 dark:active:text-zinc-400 flex items-center justify-center"
+            >
+              <svg class="w-6 h-6 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M12 .5c-6.62 0-12 5.38-12 12 0 5.3 3.438 9.794 8.205 11.387.6.111.82-.26.82-.577v-2.246c-3.338.725-4.042-1.61-4.042-1.61-.546-1.38-1.333-1.75-1.333-1.75-1.091-.745.083-.73.083-.73 1.205.083 1.838 1.238 1.838 1.238 1.073 1.838 2.82 1.306 3.508.998.109-.775.417-1.306.761-1.607-2.667-.305-5.466-1.336-5.466-5.953 0-1.317.469-2.393 1.238-3.236-.125-.305-.538-1.536.109-3.201 0 0 1.011-.322 3.305 1.233.961-.268 1.992-.402 3.015-.407 1.023.005 2.053.139 3.015.407 2.294-1.555 3.305-1.233 3.305-1.233.647 1.665.234 2.896.109 3.201.769.843 1.238 1.919 1.238 3.236 0 4.629-2.805 5.641-5.478 5.937.428.369.809 1.1.809 2.225v3.293c0 .322.219.693.826.577 4.755-1.596 8.196-6.094 8.196-11.383 0-6.62-5.38-12-12-12z"
+                />
+              </svg>
+              GitHub
+            </a>
+          </div>
+          <p class="mt-4 text-zinc-600 dark:text-zinc-300">macOS 14 (Sonoma) 이상 지원</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="shrink-0 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 mt-16">
+      <div class="container mx-auto px-4 py-12">
+        &copy; 2024
+        <a href="https://ssut.me" class="font-bold text-zinc-600 dark:text-zinc-300 hover:text-zinc-500 ml-1">
+          Suhun Han</a
+        >.
+      </div>
+    </footer>
+  </body>
+</html>
