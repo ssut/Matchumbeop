@@ -30,11 +30,14 @@ def item_channel_is_beta(item):
 if __name__ == '__main__':
     with open('new_version', 'r') as new_version_file:
         new_version = new_version_file.read()
-        last_item = get_last_item_in_appcast()
-        if(new_version in last_item):
-            print("Last item in appcast.xml contains new_version")
-            if(item_channel_is_beta(last_item)):
-                remove_last_item_in_appcast()
-                print("removed last item in appcast.xml")
-        else:
-            print("last item is not new_version")
+        try:
+            last_item = get_last_item_in_appcast()
+            if new_version in last_item:
+                print("Last item in appcast.xml contains new_version")
+                if item_channel_is_beta(last_item):
+                    remove_last_item_in_appcast()
+                    print("removed last item in appcast.xml")
+            else:
+                print("last item is not new_version")
+        except Exception as e:
+            print(e)

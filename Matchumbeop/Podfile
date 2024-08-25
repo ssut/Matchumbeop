@@ -1,0 +1,17 @@
+target 'Matchumbeop' do
+  use_frameworks!
+
+  pod 'Alamofire', '~> 5.4'
+  pod 'SwiftSoup', '~> 2.3'
+  pod 'FirebaseCore'
+  pod 'FirebaseAnalytics'
+  pod 'FirebaseCrashlytics'
+
+  target 'MatchumbeopTests' do
+    inherit! :search_paths
+  end
+
+  target 'MatchumbeopUITests' do
+  end
+
+end

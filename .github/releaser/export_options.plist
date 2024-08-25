@@ -7,6 +7,8 @@
 	<key>signingCertificate</key>
 	<string>Apple Development</string>
 	<key>signingStyle</key>
-	<string>manual</string>
+	<string>automatic</string>
+	<key>teamID</key>
+	<string>N7V29V6Q33</string>
 </dict>
 </plist>

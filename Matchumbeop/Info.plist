@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon.icns</string>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Check Spelling with Matchumbeop</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>handleServiceRequest:</string>
+			<key>NSPortName</key>
+			<string>MatchumbeopService</string>
+			<key>NSReturnTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+				<string>NSRTFPboardType</string>
+				<string>NSRTFDPboardType</string>
+			</array>
+			<key>NSServiceDescription</key>
+			<string>Check spelling of selected text</string>
+		</dict>
+	</array>
+	<key>SUFeedURL</key>
+	<string>https://ssut.github.io/Matchumbeop/Support/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>oXSo82AWzS6y7odVowozqI8jg7p2Ub6T4WxopBk7ysQ=</string>
+</dict>
+</plist>
