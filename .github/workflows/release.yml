@@ -20,7 +20,7 @@ permissions:
   pull-requests: read
 
 env:
-  projname: Matchumbeop
+  projname: "Matchumbeop"
   beta-channel-name: "beta"
 
 jobs:
@@ -138,7 +138,9 @@ jobs:
           cd Matchumbeop
           pod install
       - name: Build and archive # create archive
-        run: xcodebuild clean archive -workspace Matchumbeop/${{ env.projname }}.xcworkspace -scheme ${{ env.projname }} -archivePath ${{ env.projname }} -destination 'generic/platform=macOS'
+        run: |
+          xcodebuild archive -workspace Matchumbeop/${{ env.projname }}.xcworkspace -list
+          xcodebuild clean archive -workspace Matchumbeop/${{ env.projname }}.xcworkspace -scheme ${{ env.projname }} -archivePath ${{ env.projname }} -destination 'generic/platform=macOS'
       - name: Export app # create .app
         run: xcodebuild -exportArchive -archivePath "${{ env.projname }}.xcarchive" -exportPath Release -exportOptionsPlist ".github/releaser/export_options.plist"
       - name: Zip app # zip .app
