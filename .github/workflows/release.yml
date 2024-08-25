@@ -1,7 +1,8 @@
 name: "Create Release"
 on:
   pull_request:
-    branches: ["release/**"]
+    branches:
+      - "release/**"
     types:
       - ready_for_review
       - opened
