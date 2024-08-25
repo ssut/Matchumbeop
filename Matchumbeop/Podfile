@@ -1,4 +1,4 @@
-target 'matchumbeop' do
+target 'Matchumbeop' do
   use_frameworks!
 
   pod 'Alamofire', '~> 5.4'
@@ -7,11 +7,11 @@ target 'matchumbeop' do
   pod 'FirebaseAnalytics'
   pod 'FirebaseCrashlytics'
 
-  target 'matchumbeopTests' do
+  target 'MatchumbeopTests' do
     inherit! :search_paths
   end
 
-  target 'matchumbeopUITests' do
+  target 'MatchumbeopUITests' do
   end
 
 end

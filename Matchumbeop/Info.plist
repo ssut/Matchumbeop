@@ -31,7 +31,7 @@
 		</dict>
 	</array>
 	<key>SUFeedURL</key>
-	<string>https://raw.githubusercontent.com/ssut/Matchumbeop/release/v1.0/docs/Support/appcast.xml</string>
+	<string>https://ssut.github.io/Matchumbeop/Support/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>oXSo82AWzS6y7odVowozqI8jg7p2Ub6T4WxopBk7ysQ=</string>
 </dict>

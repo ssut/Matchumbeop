@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ssut/matchumbeop/main/icon.png" alt="Icon" width="120px" />
+  <img src="https://raw.githubusercontent.com/ssut/Matchumbeop/main/icon.png" alt="Icon" width="120px" />
 </p>
 <h1 align="center">Matchumbeop</h1>
 <p align="center">

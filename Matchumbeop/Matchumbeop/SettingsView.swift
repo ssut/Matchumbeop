@@ -139,7 +139,7 @@ struct SettingsView: View {
                     .multilineTextAlignment(.leading)
 
                 HStack(spacing: 16) {
-                    Link(destination: URL(string: "https://github.com/ssut/matchumbeop")!)
+                    Link(destination: URL(string: "https://github.com/ssut/Matchumbeop")!)
                     {
                         HStack {
                             Image(systemName: "link")
