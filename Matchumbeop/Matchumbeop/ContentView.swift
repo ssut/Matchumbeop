@@ -6,19 +6,19 @@ import Defaults
 
 struct ContentView: View {
      @StateObject var appState = AppState.shared
-
+     
      @State private var textLimit = 1800 // hard-limit (TODO: 풀기?)
      @State private var isSettingsButtonHovered = false
-
+     
      @FocusState private var isTextEditorFocused: Bool
-
+     
      @State private var lastSubmittedText: String = ""
      @State private var lastUsedEngine: SpellCheckerEngine = .naver
-
+     
      @Default(.spellCheckerEngine) var spellCheckerEngine: SpellCheckerEngine
-
+     
      private let analytics: Analytics = MatchumbeopAnalytics.shared
-
+     
      var body: some View {
           VStack(spacing: 10) {
                TextEditor(text: $appState.text)
@@ -79,7 +79,8 @@ struct ContentView: View {
                                         appState.text = String(appState.text.prefix(textLimit))
                                    }
                               }
-
+                    }
+                    .overlay(alignment: .bottom) {
                          Button(action: submitText) {
                               EmptyView()
                          }
@@ -92,46 +93,57 @@ struct ContentView: View {
                               isTextEditorFocused = true
                          }
                     }
-
-               if appState.isLoading {
-                    ProgressView()
-                         .padding(.vertical, 10)
-               } else if let errorMessage = appState.errorMessage {
-                    Text(errorMessage)
-                         .foregroundColor(.red)
-                         .padding(.vertical, 10)
-               } else if let result = appState.result {
-                    Divider()
-                    VStack {
-                         DraggableTextView(attributedText: NSAttributedString(result), font: .systemFont(ofSize: 14))
-                              .padding(.horizontal, 4)
-                              .padding(.vertical, 2)
-                              .background(Color(NSColor.windowBackgroundColor))
-
-                         HStack {
-                              HintView()
-                                   .padding(.leading, 4)
-                              Spacer()
-                              Button(action: {
-                                   NSPasteboard.general.clearContents()
-                                   let plainText = String(result.characters)
-                                   NSPasteboard.general.setString(plainText, forType: .string)
-
-                                   appState.showToast = true
-                                   DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                        appState.showToast = false
+               
+               Group {
+                    if showBottomSection() {
+                         Divider()
+                         VStack {
+                              if appState.isLoading {
+                                   ProgressView()
+                                        .progressViewStyle(CircularProgressViewStyle())
+                                        .padding(.bottom, 4)
+                              } else if let errorMessage = appState.errorMessage {
+                                   VStack {
+                                       Text(errorMessage)
+                                           .foregroundColor(.red)
+                                           .padding()
+                                           .background(Color(NSColor.windowBackgroundColor).opacity(0.9)) // Add a semi-transparent background
+                                           .cornerRadius(8) // Optional: add corner radius to match design
+                                           .padding(.bottom, 4)
                                    }
-
-                                   self.analytics.send(.textCopied)
-                              }) {
-                                   Text("복사")
+                                   .padding()
+                              } else if let result = appState.result {
+                                   DraggableTextView(attributedText: NSAttributedString(result), font: .systemFont(ofSize: 14))
+                                        .padding(.horizontal, 4)
+                                        .padding(.vertical, 2)
+                                        .background(Color(NSColor.windowBackgroundColor))
+                                   
+                                   HStack {
+                                        HintView()
+                                             .padding(.leading, 4)
+                                        Spacer()
+                                        Button(action: {
+                                             NSPasteboard.general.clearContents()
+                                             let plainText = String(result.characters)
+                                             NSPasteboard.general.setString(plainText, forType: .string)
+                                             
+                                             appState.showToast = true
+                                             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                                  appState.showToast = false
+                                             }
+                                             
+                                             self.analytics.send(.textCopied)
+                                        }) {
+                                             Text("복사")
+                                        }
+                                        .padding(.horizontal, 4)
+                                   }
+                                   .frame(height: 10)
+                                   .padding(.bottom, 2)
                               }
-                              .padding(.horizontal, 4)
                          }
-                         .frame(height: 10)
-                         .padding(.bottom, 2)
+                         .frame(maxHeight: 280)
                     }
-                    .frame(maxHeight: 280)
                }
           }
           .padding(12)
@@ -139,6 +151,16 @@ struct ContentView: View {
           .cornerRadius(12)
           .shadow(radius: 10)
           .frame(width: 480, height: calculateHeight(), alignment: .top)
+          .overlay(
+               VStack {
+                    ProgressBar(progress: $appState.progress, isError: Binding<Bool>(get: { appState.errorMessage != nil }, set: { _ in }))
+                         .frame(height: 2)
+                         .padding(.top, 0)
+                    Spacer()
+               }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .edgesIgnoringSafeArea(.top)
+          )
           .overlay(
                VStack {
                     Spacer()
@@ -151,23 +173,27 @@ struct ContentView: View {
                     .animation(.easeInOut(duration: 0.3), value: appState.showToast)
           )
      }
-
+     
      private func calculateHeight() -> CGFloat {
           let resultHeight = appState.result != nil ? 300 : 0
           return CGFloat(225 + resultHeight)
      }
-
+     
+     private func showBottomSection() -> Bool {
+          return appState.isLoading || appState.errorMessage != nil || appState.result != nil
+     }
+     
      private func submitText() {
-         if !appState.isLoading &&
-            (appState.text != lastSubmittedText || spellCheckerEngine != lastUsedEngine) {
-             Task {
-                 await self.appState.checkSpelling(text: appState.text)
-                 self.analytics.send(.spellChecked(method: .inApp, length: appState.text.count))
-
-                 lastSubmittedText = appState.text
-                 lastUsedEngine = spellCheckerEngine
-             }
-         }
+          if !appState.isLoading &&
+               (appState.text != lastSubmittedText || spellCheckerEngine != lastUsedEngine) {
+               Task {
+                    await self.appState.checkSpelling(text: appState.text)
+                    self.analytics.send(.spellChecked(method: .inApp, length: appState.text.count))
+                    
+                    lastSubmittedText = appState.text
+                    lastUsedEngine = spellCheckerEngine
+               }
+          }
      }
 }
 
