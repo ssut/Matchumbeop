@@ -19,6 +19,15 @@
 
 <img src="https://github.com/user-attachments/assets/d543dfc5-c6a2-43e8-80ff-23a60329e37c" width="45%" />
 
+## 설치하기
+
+Homebrew의 다음 명령을 이용하여 설치합니다.
+```
+brew install draftbrew/tap/matchumbeop
+```
+
+또는, 우측 상단의 Releases 메뉴에서 최신 릴리즈의 `.dmg` 파일을 다운로드하여 실행합니다.
+
 ## 사용하기
 
 작성 중입니다. 조금만 기다려주세요!
