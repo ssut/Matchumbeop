@@ -53,19 +53,3 @@ extension SpellChecker {
         return chunks
     }
 }
-
-extension String {
-    func chunked(into size: Int) -> [String] {
-        var chunks: [String] = []
-        var startIndex = self.startIndex
-        
-        while startIndex < self.endIndex {
-            let endIndex = self.index(startIndex, offsetBy: size, limitedBy: self.endIndex) ?? self.endIndex
-            let chunk = String(self[startIndex..<endIndex])
-            chunks.append(chunk)
-            startIndex = endIndex
-        }
-        
-        return chunks
-    }
-}

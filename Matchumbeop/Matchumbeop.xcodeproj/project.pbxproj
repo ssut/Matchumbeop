@@ -10,7 +10,7 @@
 		302B5FB22C7620530043351B /* AnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FB12C7620530043351B /* AnalyticsEngine.swift */; };
 		302B5FB52C76208F0043351B /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FB42C76208F0043351B /* Analytics.swift */; };
 		302B5FB72C7620CF0043351B /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FB62C7620CF0043351B /* AnalyticsEvent.swift */; };
-		302B5FBA2C7621180043351B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FB92C7621180043351B /* String.swift */; };
+		302B5FBA2C7621180043351B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FB92C7621180043351B /* StringExtension.swift */; };
 		302B5FBD2C7622170043351B /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FBC2C7622170043351B /* AnalyticsEvents.swift */; };
 		302B5FC02C7756EB0043351B /* SpellChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FBF2C7756EB0043351B /* SpellChecker.swift */; };
 		302B5FC32C7758690043351B /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FC22C7758690043351B /* Defaults.swift */; };
@@ -70,7 +70,7 @@
 		302B5FB12C7620530043351B /* AnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEngine.swift; sourceTree = "<group>"; };
 		302B5FB42C76208F0043351B /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		302B5FB62C7620CF0043351B /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
-		302B5FB92C7621180043351B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		302B5FB92C7621180043351B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		302B5FBC2C7622170043351B /* AnalyticsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvents.swift; sourceTree = "<group>"; };
 		302B5FBF2C7756EB0043351B /* SpellChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellChecker.swift; sourceTree = "<group>"; };
 		302B5FC22C7758690043351B /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
@@ -166,7 +166,8 @@
 		302B5FB82C7621100043351B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				302B5FB92C7621180043351B /* String.swift */,
+				306064722C6C8AE400BC6350 /* SpellCheckerExtension.swift */,
+				302B5FB92C7621180043351B /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,7 +231,6 @@
 				306064632C6B87D400BC6350 /* SettingsView.swift */,
 				3060646A2C6B8E8C00BC6350 /* AppState.swift */,
 				3060646C2C6B957D00BC6350 /* AppDelegate.swift */,
-				306064722C6C8AE400BC6350 /* SpellCheckerExtension.swift */,
 				3042EB8E2C739E5100F69690 /* Constants.swift */,
 				30D5E0A12C74458C00295E53 /* Utils.swift */,
 				302B5FC22C7758690043351B /* Defaults.swift */,
@@ -615,7 +615,7 @@
 				302B5FC02C7756EB0043351B /* SpellChecker.swift in Sources */,
 				30467E402C6B865B007A0F19 /* ContentView.swift in Sources */,
 				306064622C6B87BF00BC6350 /* NaverSpellChecker.swift in Sources */,
-				302B5FBA2C7621180043351B /* String.swift in Sources */,
+				302B5FBA2C7621180043351B /* StringExtension.swift in Sources */,
 				3042EB8F2C739E5100F69690 /* Constants.swift in Sources */,
 				302B5FC32C7758690043351B /* Defaults.swift in Sources */,
 				302B5FBD2C7622170043351B /* AnalyticsEvents.swift in Sources */,
