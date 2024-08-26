@@ -112,6 +112,27 @@ struct SettingsView: View {
                                 .padding(.leading, 10)
                         }
                     }
+                    
+                    GridRow(alignment: .firstTextBaseline) {
+                        Text("서비스 등록:")
+
+                        VStack(alignment: .leading) {
+                            Button("macOS 설정 열기") {
+                                openKeyboardShortcutsSettings()
+                            }
+                            .padding(.leading, 10)
+                            
+                            HStack(spacing: 4) {
+                                Text("서비스를 등록하여 다른 앱에서 선택된 텍스트를 바로 검사할 수 있습니다.")
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                                    .padding(.leading, 10)
+                                
+                                Link("설정 방법 확인하기", destination: URL(string: "https://github.com/ssut/Matchumbeop/wiki/macOS-서비스-등록-방법")!)
+                                    .font(.subheadline)
+                            }
+                        }
+                    }
 
                     GridRow(alignment: .firstTextBaseline) {
                         Text("")
