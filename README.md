@@ -23,6 +23,8 @@
 
 작성 중입니다. 조금만 기다려주세요!
 
+- **cmd + return (커맨드 + 엔터):** 맞춤법 검사 진행
+
 ### 기본 단축키
 
 ![Screenshot 2024-08-24 at 13 40 18](https://github.com/user-attachments/assets/1f3ea704-8eb9-426d-8059-24c47f958295)
