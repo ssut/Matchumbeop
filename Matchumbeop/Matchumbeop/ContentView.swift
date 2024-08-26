@@ -23,7 +23,11 @@ struct ContentView: View {
           VStack(spacing: 10) {
                TextEditor(text: $appState.text)
                     .focused($isTextEditorFocused)
-                    .textEditorStyle(.plain)
+                    .textFieldStyle(PlainTextFieldStyle())
+                    .font(.body)
+                    .foregroundColor(.primary)
+                    .background(.clear)
+                    .scrollContentBackground(.hidden)
                     .autocorrectionDisabled()
                     .lineSpacing(2)
                     .font(.system(size: 14))
@@ -36,7 +40,6 @@ struct ContentView: View {
                                    .foregroundColor(Color(.systemGray))
                          }
                     }
-                    .background(Color(NSColor.windowBackgroundColor))
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .overlay(alignment: .topTrailing) {
                          Button(action: {
@@ -71,8 +74,8 @@ struct ContentView: View {
                               )
                               .padding(.trailing, 6)
                               .padding(.bottom, 6)
-                              .onChange(of: appState.text) {
-                                   if appState.text.count > textLimit {
+                              .onReceive(Just(appState.text.count)) { count in
+                                   if count > textLimit {
                                         appState.text = String(appState.text.prefix(textLimit))
                                    }
                               }
