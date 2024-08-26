@@ -1,6 +1,7 @@
 import SwiftUI
 import KeyboardShortcuts
 import FirebaseCore
+import Defaults
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     @StateObject var appState = AppState.shared
@@ -45,6 +46,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusBarMenu.addItem(NSMenuItem(title: "종료", action: #selector(quitApp), keyEquivalent: ""))
 
         menu = statusBarMenu
+        
+        _ = updateHasLaunchedOnce()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+            _ = self.togglePopover()
+        }
+    }
+    
+    func updateHasLaunchedOnce() -> Bool {
+        if !Defaults[.hasLaunchedOnce] {
+            Defaults[.hasLaunchedOnce] = true
+            return true
+        }
+        
+        return false
     }
 
     @MainActor @objc func pasteAndCheck(input: String) {
