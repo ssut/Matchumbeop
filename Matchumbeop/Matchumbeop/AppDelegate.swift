@@ -53,6 +53,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    func applicationDidBecomeActive(_ notification: Notification) {
+        NSApp.unhide(self)
+        
+        if !popover.isShown {
+            _ = togglePopover()
+        }
+    }
+    
     func updateHasLaunchedOnce() -> Bool {
         if !Defaults[.hasLaunchedOnce] {
             Defaults[.hasLaunchedOnce] = true
