@@ -37,12 +37,12 @@ jobs:
         id: latest_changes
         run: |
           python3 ./.github/releaser/generate_latest_changes.py
-      - name: Check if version already released
-        run: |
-          if [[ $(xcrun agvtool what-version -terse) == $(cat new_version) ]]; then
-            echo "Version already released" >> $GITHUB_STEP_SUMMARY
-            exit 1
-          fi
+      # - name: Check if version already released
+      #   run: |
+      #     if [[ $(xcrun agvtool what-version -terse) == $(cat new_version) ]]; then
+      #       echo "Version already released" >> $GITHUB_STEP_SUMMARY
+      #       exit 1
+      #     fi
       - name: Check if release notes are empty
         run: |
           if [[ $(cat latest_changes) == "" ]]; then
@@ -84,9 +84,6 @@ jobs:
         with:
           key: xcode-cache-deriveddata-${{ github.workflow }}-${{ github.sha }}
           restore-keys: xcode-cache-deriveddata-${{ github.workflow }}-
-      - name: Override versions in project # set new version in project
-        run: |
-          sed -i '' "s/_VERSION = $(xcrun agvtool what-version -terse)/_VERSION = ${{ steps.info.outputs.new_version }}/g" Matchumbeop/${{ env.projname }}.xcodeproj/project.pbxproj;
       - name:
           Install the Apple certificate and provisioning profile
           # install the Apple certificate and provisioning profile
@@ -238,15 +235,15 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
-      - name: Merge PR
-        uses: devmasx/merge-branch@v1
-        with:
-          type: now
-          from_branch: ${{ steps.comment-branch.outputs.head_ref }}
-          target_branch: ${{ steps.comment-branch.outputs.base_ref }}
-          github_token: ${{ github.token }}
-          message: "chore(release): update version to ${{ steps.info.outputs.new_version }}"
+      # - uses: actions/checkout@v4
+      # - name: Merge PR
+      #   uses: devmasx/merge-branch@v1
+      #   with:
+      #     type: now
+      #     from_branch: ${{ steps.comment-branch.outputs.head_ref }}
+      #     target_branch: ${{ steps.comment-branch.outputs.base_ref }}
+      #     github_token: ${{ github.token }}
+      #     message: "chore(release): update version to ${{ steps.info.outputs.new_version }}"
       - uses: geekyeggo/delete-artifact@v2
         with:
           name: "*"
