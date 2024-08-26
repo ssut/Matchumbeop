@@ -10,16 +10,12 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>Check Spelling with Matchumbeop</string>
+				<string>한글 맞춤법 검사</string>
 			</dict>
 			<key>NSMessage</key>
-			<string>handleServiceRequest:</string>
+			<string>handlePasteAndCheck</string>
 			<key>NSPortName</key>
 			<string>MatchumbeopService</string>
-			<key>NSReturnTypes</key>
-			<array>
-				<string>NSStringPboardType</string>
-			</array>
 			<key>NSSendTypes</key>
 			<array>
 				<string>NSStringPboardType</string>
@@ -27,7 +23,11 @@
 				<string>NSRTFDPboardType</string>
 			</array>
 			<key>NSServiceDescription</key>
-			<string>Check spelling of selected text</string>
+			<string>선택한 텍스트의 한글 맞춤법을 검사합니다.</string>
+			<key>NSRestricted</key>
+			<false/>
+			<key>NSRequiredContext</key>
+			<dict/>
 		</dict>
 	</array>
 	<key>SUFeedURL</key>
