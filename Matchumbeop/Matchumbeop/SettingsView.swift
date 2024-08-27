@@ -87,19 +87,6 @@ struct SettingsView: View {
                         .gridColumnAlignment(.leading)
                     }
 
-                    //                GridRow(alignment: .firstTextBaseline) {
-                    //                    Text("자동 복사 단축키:")
-                    //
-                    //                    VStack(alignment: .leading) {
-                    //                        KeyboardShortcuts.Recorder("", name: .checkSelection)
-                    //
-                    //                        Text("다른 앱 사용 중 선택한 텍스트를 자동으로 복사하여 검사하는 단축키를 지정합니다.")
-                    //                            .font(.subheadline)
-                    //                            .foregroundColor(.gray)
-                    //                            .padding(.leading, 10)
-                    //                    }
-                    //                }
-
                     GridRow(alignment: .firstTextBaseline) {
                         Text("붙여넣기 단축키:")
 

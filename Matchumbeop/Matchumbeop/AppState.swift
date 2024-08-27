@@ -38,12 +38,6 @@ final class AppState: ObservableObject {
             self?.toggleWindow()
         }
         
-        //        KeyboardShortcuts.onKeyUp(for: .checkSelection) { [weak self] in
-        //            if let text = getSelectedText() {
-        //                self?.pasteAndCheck(text: text)
-        //            }
-        //        }
-        
         KeyboardShortcuts.onKeyUp(for: .pasteAndCheck) { [weak self] in
             let text = NSPasteboard.general.string(forType: .string) ?? ""
             self?.pasteAndCheck(input: text)
