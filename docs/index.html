@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matchumbeop - macOS용 한글 맞춤법 검사기</title>
+    <meta name="description" content="간편한 macOS용 한글 맞춤법 검사기" />
+    <meta name="keywords" content="한글, 맞춤법, 검사기, macOS, 맥북, 맥" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -75,12 +77,13 @@
             macOS용 한글 맞춤법 검사기
           </div>
           <div class="mt-5 text-zinc-600 dark:text-zinc-300 text-xl md:text-2xl">
-            macOS용 네이티브 한글 맞춤법 검사기, <strike class="text-zinc-400 dark:text-zinc-500">외없데?</strike> 여기
+            간편한 macOS용 한글 맞춤법 검사기, <strike class="text-zinc-400 dark:text-zinc-500">외없데?</strike> 여기
             있어요!
           </div>
           <div class="mt-12 flex flex-wrap gap-5 items-center">
             <a
-              href="https://github.com/ssut/Matchumbeop/releases#:~:text=Matchumbeop.zip"
+              id="download-button"
+              href="https://github.com/ssut/Matchumbeop/releases"
               class="w-full sm:w-auto text-xl text-center font-semibold select-none text-white px-5 py-3 rounded-md shadow-md dark:shadow-none bg-zinc-600 shadow-zinc-500/25 transition-all hover:bg-zinc-500 active:bg-zinc-700 active:shadow-sm flex items-center justify-center"
             >
               <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -122,7 +125,8 @@
                   </g>
                 </g>
               </svg>
-              다운로드
+              <span id="button-text">다운로드</span>
+              <span id="loading-indicator" style="display: none">준비 중...</span>
             </a>
             <a
               href="https://github.com/ssut/Matchumbeop#%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0"
@@ -157,8 +161,51 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-V0VKHPRPQL");
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const downloadButton = document.querySelector("#download-button");
+        const buttonText = document.querySelector("#button-text");
+        const loadingIndicator = document.querySelector("#loading-indicator");
+
+        downloadButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          downloadButton.disabled = true;
+          buttonText.style.display = "none";
+          loadingIndicator.style.display = "inline";
+
+          gtag("event", "download", {
+            event_category: "button",
+            event_label: "Download Button",
+          });
+
+          fetch("https://api.github.com/repos/ssut/Matchumbeop/releases/latest")
+            .then((resp) => resp.json())
+            .then((response) => {
+              if (!Array.isArray(response.assets) || response.assets.length === 0) {
+                window.location.href = "https://github.com/ssut/Matchumbeop/releases";
+              } else {
+                const desiredAsset = response.assets.find((asset) => asset.name.endsWith(".dmg")) ?? response.assets[0];
+
+                const downloadLink = document.createElement("a");
+                downloadLink.href = desiredAsset.browser_download_url;
+                downloadLink.target = "_blank";
+                downloadLink.click();
+                downloadLink.remove();
+              }
+            })
+            .catch((error) => {
+              console.error("Error fetching the release:", error);
+              window.location.href = "https://github.com/ssut/Matchumbeop/releases";
+            })
+            .finally(() => {
+              downloadButton.disabled = false;
+              buttonText.style.display = "inline";
+              loadingIndicator.style.display = "none";
+            });
+        });
+      });
     </script>
   </body>
 </html>

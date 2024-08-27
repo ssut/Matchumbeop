@@ -17,5 +17,6 @@ enum SpellCheckerEngine: String, Defaults.Serializable, CaseIterable, Identifiab
 }
 
 extension Defaults.Keys {
+    static let hasLaunchedOnce = Key<Bool>("hasLaunchedOnce", default: false)
     static let spellCheckerEngine = Key<SpellCheckerEngine>("spellCheckerEngine", default: .naver)
 }

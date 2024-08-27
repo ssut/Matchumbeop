@@ -1,6 +1,7 @@
 import ApplicationServices
 import SwiftUI
 import SwiftSoup
+import AppKit
 
 func getSelectedText() -> String? {
     let systemWideElement = AXUIElementCreateSystemWide()
@@ -90,3 +91,10 @@ func locateHostBundleURL(url: URL) -> URL? {
         .appendingPathComponent("Matchumbeop Dev.app")
     return devAppURL
 }
+
+func openKeyboardShortcutsSettings() {
+    if let url = URL(string: "x-apple.systempreferences:com.apple.preference.keyboard?Shortcuts") {
+        NSWorkspace.shared.open(url)
+    }
+}
+

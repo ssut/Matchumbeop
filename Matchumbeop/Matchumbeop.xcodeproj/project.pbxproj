@@ -10,7 +10,7 @@
 		302B5FB22C7620530043351B /* AnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FB12C7620530043351B /* AnalyticsEngine.swift */; };
 		302B5FB52C76208F0043351B /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FB42C76208F0043351B /* Analytics.swift */; };
 		302B5FB72C7620CF0043351B /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FB62C7620CF0043351B /* AnalyticsEvent.swift */; };
-		302B5FBA2C7621180043351B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FB92C7621180043351B /* String.swift */; };
+		302B5FBA2C7621180043351B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FB92C7621180043351B /* StringExtension.swift */; };
 		302B5FBD2C7622170043351B /* AnalyticsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FBC2C7622170043351B /* AnalyticsEvents.swift */; };
 		302B5FC02C7756EB0043351B /* SpellChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FBF2C7756EB0043351B /* SpellChecker.swift */; };
 		302B5FC32C7758690043351B /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B5FC22C7758690043351B /* Defaults.swift */; };
@@ -40,6 +40,8 @@
 		30D5E0BC2C74C3B800295E53 /* UpdateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5E0BB2C74C3B800295E53 /* UpdateChecker.swift */; };
 		30D5E0C22C74D48B00295E53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30D5E0C12C74D48B00295E53 /* GoogleService-Info.plist */; };
 		30D5E0C32C74EA3600295E53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30467E182C6B862B007A0F19 /* Assets.xcassets */; };
+		30FA3ACB2C7CAEE0001D2BC8 /* ServicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA3ACA2C7CAEE0001D2BC8 /* ServicesProvider.swift */; };
+		30FA3ACE2C7CC4BB001D2BC8 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA3ACD2C7CC4BB001D2BC8 /* ProgressBar.swift */; };
 		30FD9E4A2C7B4DCA001F0A67 /* Pods_Matchumbeop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F824DF638CDA1CC6E6527CEE /* Pods_Matchumbeop.framework */; };
 		3A31439163416A2CF1FE5904 /* Pods_MatchumbeopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82DBF95B47E43A32F9E8A0D2 /* Pods_MatchumbeopTests.framework */; };
 		B4F877EA4C02633AFAEBC07E /* Pods_Matchumbeop_MatchumbeopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F48963954137C846417FC93 /* Pods_Matchumbeop_MatchumbeopUITests.framework */; };
@@ -69,7 +71,7 @@
 		302B5FB12C7620530043351B /* AnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEngine.swift; sourceTree = "<group>"; };
 		302B5FB42C76208F0043351B /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		302B5FB62C7620CF0043351B /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
-		302B5FB92C7621180043351B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		302B5FB92C7621180043351B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		302B5FBC2C7622170043351B /* AnalyticsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvents.swift; sourceTree = "<group>"; };
 		302B5FBF2C7756EB0043351B /* SpellChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellChecker.swift; sourceTree = "<group>"; };
 		302B5FC22C7758690043351B /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
@@ -102,6 +104,8 @@
 		30D5E0B72C74C18200295E53 /* Pods_matchumbeop_matchumbeopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_matchumbeop_matchumbeopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D5E0BB2C74C3B800295E53 /* UpdateChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateChecker.swift; sourceTree = "<group>"; };
 		30D5E0C12C74D48B00295E53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30FA3ACA2C7CAEE0001D2BC8 /* ServicesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesProvider.swift; sourceTree = "<group>"; };
+		30FA3ACD2C7CC4BB001D2BC8 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		42D54CEFC3D0D4B5A8B9A049 /* Pods-MatchumbeopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchumbeopTests.debug.xcconfig"; path = "Target Support Files/Pods-MatchumbeopTests/Pods-MatchumbeopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4AD7A1A528B8859594BCF5B2 /* Pods-matchumbeopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matchumbeopTests.release.xcconfig"; path = "Target Support Files/Pods-matchumbeopTests/Pods-matchumbeopTests.release.xcconfig"; sourceTree = "<group>"; };
 		515602CE4845FDE6082D32DD /* Pods-Matchumbeop-MatchumbeopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matchumbeop-MatchumbeopUITests.debug.xcconfig"; path = "Target Support Files/Pods-Matchumbeop-MatchumbeopUITests/Pods-Matchumbeop-MatchumbeopUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,7 +168,8 @@
 		302B5FB82C7621100043351B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				302B5FB92C7621180043351B /* String.swift */,
+				306064722C6C8AE400BC6350 /* SpellCheckerExtension.swift */,
+				302B5FB92C7621180043351B /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,7 +194,6 @@
 		30467E082C6B862A007A0F19 = {
 			isa = PBXGroup;
 			children = (
-				3042EB8C2C7393BC00F69690 /* ToastView.swift */,
 				306064682C6B8C5800BC6350 /* Info.plist */,
 				30410C092C74EC1300AF9126 /* AppIcon.icns */,
 				30467E132C6B862A007A0F19 /* Matchumbeop */,
@@ -229,10 +233,10 @@
 				306064632C6B87D400BC6350 /* SettingsView.swift */,
 				3060646A2C6B8E8C00BC6350 /* AppState.swift */,
 				3060646C2C6B957D00BC6350 /* AppDelegate.swift */,
-				306064722C6C8AE400BC6350 /* SpellCheckerExtension.swift */,
 				3042EB8E2C739E5100F69690 /* Constants.swift */,
 				30D5E0A12C74458C00295E53 /* Utils.swift */,
 				302B5FC22C7758690043351B /* Defaults.swift */,
+				30FA3ACA2C7CAEE0001D2BC8 /* ServicesProvider.swift */,
 			);
 			path = Matchumbeop;
 			sourceTree = "<group>";
@@ -265,6 +269,8 @@
 		30D5E0A32C74BB2F00295E53 /* SharedUIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				3042EB8C2C7393BC00F69690 /* ToastView.swift */,
+				30FA3ACD2C7CC4BB001D2BC8 /* ProgressBar.swift */,
 				306064702C6BB82D00BC6350 /* DraggableTextView.swift */,
 				3042EB8A2C73810400F69690 /* HintView.swift */,
 				30D5E0A42C74BB4800295E53 /* SettingsDivider.swift */,
@@ -607,18 +613,20 @@
 				302B5FB72C7620CF0043351B /* AnalyticsEvent.swift in Sources */,
 				302B5FB22C7620530043351B /* AnalyticsEngine.swift in Sources */,
 				3042EB8D2C7393BC00F69690 /* ToastView.swift in Sources */,
+				30FA3ACE2C7CC4BB001D2BC8 /* ProgressBar.swift in Sources */,
 				30D5E0BC2C74C3B800295E53 /* UpdateChecker.swift in Sources */,
 				3060646B2C6B8E8C00BC6350 /* AppState.swift in Sources */,
 				302B5FC02C7756EB0043351B /* SpellChecker.swift in Sources */,
 				30467E402C6B865B007A0F19 /* ContentView.swift in Sources */,
 				306064622C6B87BF00BC6350 /* NaverSpellChecker.swift in Sources */,
-				302B5FBA2C7621180043351B /* String.swift in Sources */,
+				302B5FBA2C7621180043351B /* StringExtension.swift in Sources */,
 				3042EB8F2C739E5100F69690 /* Constants.swift in Sources */,
 				302B5FC32C7758690043351B /* Defaults.swift in Sources */,
 				302B5FBD2C7622170043351B /* AnalyticsEvents.swift in Sources */,
 				30467E152C6B862A007A0F19 /* MatchumbeopApp.swift in Sources */,
 				306064712C6BB82D00BC6350 /* DraggableTextView.swift in Sources */,
 				30D5E0A22C74458C00295E53 /* Utils.swift in Sources */,
+				30FA3ACB2C7CAEE0001D2BC8 /* ServicesProvider.swift in Sources */,
 				30D5E0A52C74BB4800295E53 /* SettingsDivider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -802,8 +810,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -849,8 +857,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
