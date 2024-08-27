@@ -24,13 +24,12 @@ struct ContentView: View {
                TextEditor(text: $appState.text)
                     .focused($isTextEditorFocused)
                     .textFieldStyle(PlainTextFieldStyle())
-                    .font(.body)
+                    .font(.system(size: 14))
                     .foregroundColor(.primary)
                     .background(.clear)
                     .scrollContentBackground(.hidden)
                     .autocorrectionDisabled()
                     .lineSpacing(2)
-                    .font(.system(size: 14))
                     .background(alignment: .topLeading) {
                          if appState.text.isEmpty {
                               Text("맞춤법 검사를 원하는 단어나 문장을 입력해 주세요.\n검사: command + return (⌘ + ↩)")
