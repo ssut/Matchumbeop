@@ -6,6 +6,23 @@
         <description>Most recent changes with links to updates.</description>
         <language>ko</language>
         <item>
+            <title>1.1.0</title>
+            <pubDate>Tue, 27 Aug 2024 12:00:27 +0000</pubDate>
+            <link>https://github.com/ssut/Matchumbeop/releases</link>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h1>macOS Ventura (13.0+) 지원, 사용성 개선, macOS 서비스 메뉴 추가</h1>
+<ul>
+<li>macOS Ventura (13.0+)를 지원합니다.</li>
+<li>앱 실행 시 아무 동작이 없는 것처럼 보인다는 피드백을 반영하여 실행 직후 맞춤법 검사기 화면을 표시하도록 변경했습니다.</li>
+<li>Dock에 앱을 두고 사용하는 경우를 고려해 Dock에 있는 앱을 클릭했을 때 맞춤법 검사기 화면이 표시되도록 변경했습니다.</li>
+<li>검사 진행 중 확인이 가능하도록 진행률을 표시하도록 추가했습니다.</li>
+<li>맥 내 서비스(Services) 메뉴에서도 맞춤법 검사를 할 수 있도록 추가했습니다. 단축키를 할당하면 아무 곳에서나 선택한 텍스트를 바로 검사할 수 있습니다. 방법: https://github.com/ssut/Matchumbeop/wiki/macOS-서비스-등록-방법</li>
+</ul>]]></description>
+            <enclosure url="https://github.com/ssut/Matchumbeop/releases/download/v1.1.0/Matchumbeop.zip" length="7552187" type="application/octet-stream" sparkle:edSignature="ZFGHc8e+broGxjvuKvNW0EWwUwn63uz63EMxnVzlioiP/6eHc+FakEC7l8UDO9SmMrlI76mAa0bNy0vuM6AHCQ=="/>
+        </item>
+        <item>
             <title>1.0</title>
             <pubDate>Sun, 25 Aug 2024 12:47:42 +0000</pubDate>
             <link>https://github.com/ssut/Matchumbeop/releases</link>
